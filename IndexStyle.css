@@ -1,0 +1,781 @@
+/* === Variables CSS === */
+:root {
+  --primary: #FF6B35;   /* Naranja cálido como color principal */
+  --secondary: #004E89; /* Azul para contraste */
+  --accent: #6BB36B;    /* Verde esperanza para acentos */
+  --light: #F9F7F3;     /* Fondo claro */
+  --dark: #232323;      /* Texto oscuro */
+  --gray: #E6E6E6;      /* Gris claro para fondos secundarios */
+  --white: #FFFFFF;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --font-primary: 'Segoe UI', 'Roboto', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* === Reseteo Básico y Estilos Globales === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  font-size: 16px; /* Base font size */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Evita espacio extra debajo de las imágenes */
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+h1, h2, h3 {
+  line-height: 1.3;
+  margin-bottom: 0.75em;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+h1 { font-size: 2.5rem; } /* ~40px */
+h2 { font-size: 2rem; }   /* ~32px */
+h3 { font-size: 1.25rem; } /* ~20px */
+
+ul {
+    list-style: none;
+}
+
+/* === Contenedor Principal === */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === Clases Utilitarias === */
+.text-center {
+  text-align: center;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+/* === Estilos de Secciones === */
+.section {
+    /* Padding por defecto, puede ser sobreescrito por modificadores */
+    padding: 60px 0;
+}
+
+.section--padding {
+    padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title h2 {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+/* === Header y Navegación === */
+.header {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0; /* Reset margin for h1 in logo */
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  margin-left: 25px;
+}
+/* Ocultar botones de auth en el nav por defecto */
+.nav__item--mobile-auth {
+    display: none;
+}
+
+.nav__link {
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 1rem; /* 16px */
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  padding-bottom: 8px; /* Espacio para la línea inferior */
+}
+
+.nav__link:hover {
+  color: var(--primary);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0; /* Ajustado para estar justo debajo del texto */
+  left: 0;
+  background-color: var(--primary);
+  transition: width var(--transition-speed) ease;
+}
+
+.nav__link:hover::after, .nav__link.active::after {
+  width: 100%;
+}
+
+/* Botones de Autenticación (Desktop) */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Botón General */
+.btn {
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+  border: 2px solid transparent; /* Borde base transparente */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.9rem; /* ~14.4px */
+  line-height: 1.2; /* Ajuste para alinear texto e icono */
+}
+
+.btn i {
+    font-size: 1em; /* Icono relativo al tamaño del texto del botón */
+}
+
+.btn--primary {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.btn--primary:hover {
+  background-color: #ff5a20; /* Un poco más oscuro */
+  border-color: #ff5a20;
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn--outline {
+  background-color: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+}
+
+/* Modificador para botones que ocupan todo el ancho en su contenedor */
+.btn--block {
+    flex: 1; /* Ocupa el espacio disponible en un flex container */
+    /* width: 100%; si no está en flex */
+}
+
+
+/* Menú Móvil */
+.mobile-menu {
+  display: none; /* Oculto por defecto */
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--dark);
+  background: none;
+  border: none;
+  padding: 5px; /* Área de toque */
+}
+
+/* === Hero Section === */
+.hero {
+  background: linear-gradient(to right, rgba(255, 107, 53, 0.8), rgba(0, 78, 137, 0.8)), url('https://api.placeholder.com/1200/600/cccccc/ffffff?text=Hero+Background') no-repeat center center;
+  background-size: cover;
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 5vw, 2.625rem); /* Responsive font size (min 32px, grows, max 42px) */
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: var(--white); /* Título en blanco sobre fondo oscuro */
+}
+
+.hero__text {
+  font-size: 1.125rem; /* 18px */
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9; /* Ligera transparencia */
+}
+
+.hero__buttons {
+  display: flex;
+  flex-wrap: wrap; /* Para móviles */
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* === Sección Campañas === */
+.campaigns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.campaign-card {
+  background-color: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+}
+
+.campaign-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.campaign-card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.campaign-card__content {
+  padding: 20px;
+  flex-grow: 1; /* Permite que el contenido crezca para llenar el espacio */
+  display: flex;
+  flex-direction: column;
+}
+
+.campaign-card__title {
+  font-size: 1.25rem; /* 20px */
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
+
+.campaign-card__description {
+    font-size: 0.95rem; /* ~15px */
+    margin-bottom: 15px;
+    flex-grow: 1; /* Empuja acciones y barra de progreso hacia abajo */
+}
+
+/* Barra de progreso */
+.progress { /* Renombrado de .campaign-progress para reutilización */
+  margin: 15px 0;
+}
+
+.progress__bar {
+  height: 8px;
+  background-color: var(--gray);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress__fill {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 4px;
+  transition: width 0.5s ease-out; /* Animación suave del progreso */
+  /* El width se establece inline o con JS */
+}
+
+.progress__info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem; /* 14px */
+  color: #555;
+}
+
+/* Acciones de la tarjeta */
+.campaign-card__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px; /* Separación de la barra de progreso */
+}
+
+/* Botones de compartir */
+.share-buttons {
+  display: flex;
+  align-items: center; /* Alinea el texto "Compartir:" */
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap; /* Por si no caben */
+}
+
+.share-buttons span {
+    font-size: 0.9rem;
+    color: #666;
+    margin-right: 5px;
+}
+
+.share-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1rem; /* 16px */
+  transition: all 0.2s ease;
+  border: none; /* Asegura que no haya borde por defecto en 'a' */
+}
+
+.share-btn:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.share-btn--facebook { background-color: #3b5998; }
+.share-btn--whatsapp { background-color: #25D366; }
+.share-btn--instagram { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); }
+
+
+/* === Sección Cómo Funciona === */
+.how-it-works {
+  background-color: var(--gray);
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.step {
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  transition: all var(--transition-speed) ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.step__icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(255, 107, 53, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 28px;
+  color: var(--primary);
+}
+
+.step__title { /* Renombrado de h3 */
+  margin-bottom: 15px;
+  color: var(--secondary);
+}
+
+.step__text { /* Renombrado de p */
+    font-size: 0.95rem;
+}
+
+
+/* === Sección Profesionales === */
+.professionals__content {
+    max-width: 800px;
+    margin: 0 auto; /* Centrado */
+}
+
+/* === Formularios (Estilos base si los añades) === */
+.form-section {
+  background-color: var(--white); /* O el fondo que prefieras */
+}
+
+.form-container {
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-header h2 {
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="url"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+}
+
+textarea {
+    resize: vertical; /* Permitir redimensionar solo verticalmente */
+    min-height: 120px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap; /* Para que se apilen en pantallas pequeñas */
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1; /* Ocupa espacio disponible */
+  min-width: 200px; /* Ancho mínimo antes de apilarse */
+}
+
+/* Estilo para carga de archivos */
+.file-upload {
+  background-color: var(--gray);
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.file-upload:hover {
+  background-color: #d9d9d9;
+  border-color: var(--primary);
+}
+
+.file-upload i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.file-upload span {
+    display: block;
+    color: #555;
+}
+
+.file-upload input[type="file"] {
+  display: none; /* Ocultar el input real */
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+/* === Footer === */
+.footer {
+  background-color: var(--secondary);
+  color: var(--light); /* Texto claro sobre fondo oscuro */
+  padding: 50px 0 20px;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer__column h3.footer__title {
+  font-size: 1.125rem; /* 18px */
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+  color: var(--white); /* Títulos del footer en blanco */
+}
+
+.footer__column h3.footer__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+.footer__column p,
+.footer__column address {
+    font-size: 0.95rem;
+    color: #ddd;
+    line-height: 1.7;
+}
+
+.footer__list li {
+  margin-bottom: 10px;
+}
+
+.footer__list a,
+.footer__address a {
+  color: #ddd;
+  transition: color var(--transition-speed) ease;
+}
+
+.footer__list a:hover,
+.footer__address a:hover {
+  color: var(--primary);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  transition: all var(--transition-speed) ease;
+  font-size: 1rem;
+}
+
+.social-links a:hover {
+  background-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.footer__bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.875rem; /* 14px */
+  color: #ccc;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .header__container {
+    padding: 15px; /* Más padding en móvil */
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%; /* Se posiciona justo debajo del header */
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    /* Transición para la aparición */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); /* Transición suave */
+  }
+
+  .nav.show {
+     max-height: 100vh; /* Un valor grande para asegurar que quepa todo */
+     transition: max-height 1s ease-in-out; /* Transición suave */
+  }
+
+  .nav__list {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center; /* Centra los items */
+  }
+
+  .nav__item {
+    margin: 10px 0;
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centra el texto del enlace */
+  }
+
+  .nav__link {
+      display: block; /* Hace que todo el área sea clickeable */
+      padding: 10px 0;
+  }
+
+   /* Mostrar botones de auth en el menú móvil */
+  .nav__item--mobile-auth {
+    display: block;
+    margin-top: 15px;
+  }
+  .nav__item--mobile-auth .btn {
+      width: 80%; /* O un ancho fijo */
+      margin: 5px auto;
+  }
+
+
+  .mobile-menu {
+    display: block; /* Mostrar el botón de hamburguesa */
+  }
+
+  .auth-buttons {
+    display: none; /* Ocultar botones de auth del header en móvil */
+  }
+
+  .hero__title {
+     font-size: clamp(1.8rem, 6vw, 2rem); /* Ajuste tamaño para móvil */
+  }
+
+  .hero__text {
+      font-size: 1rem; /* 16px */
+  }
+
+  .hero__buttons .btn {
+      width: 80%; /* Botones más anchos en móvil */
+      justify-content: center;
+  }
+
+  .campaigns {
+    grid-template-columns: 1fr; /* Una columna en móvil */
+  }
+
+  .steps {
+      flex-direction: column; /* Apila los pasos */
+      align-items: center; /* Centra los pasos */
+  }
+
+  .step {
+      width: 90%; /* Más ancho en móvil */
+      max-width: 400px;
+  }
+
+  .form-row {
+    flex-direction: column; /* Apila los campos del formulario */
+    gap: 0; /* Sin espacio extra vertical */
+  }
+  .form-row .form-group {
+      margin-bottom: 20px; /* Mantiene el espacio inferior */
+  }
+
+  .footer__content {
+      grid-template-columns: 1fr; /* Una columna en el footer */
+      text-align: center; /* Centra el contenido del footer */
+  }
+  .footer__column h3.footer__title::after {
+      left: 50%;
+      transform: translateX(-50%); /* Centra la línea del título */
+  }
+  .social-links {
+      justify-content: center; /* Centra los iconos sociales */
+  }
+}

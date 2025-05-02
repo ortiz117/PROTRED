@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROTRED - Una mano para quien lo necesita</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="IndexStyle.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <h1>PROTRED</h1>
+      </div>
+
+      <button class="mobile-menu" aria-label="Abrir menú" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link active">Inicio</a></li>
+          <li class="nav__item"><a href="campanas.html" class="nav__link">Campañas</a></li>
+          <li class="nav__item"><a href="como-funciona.html" class="nav__link">Cómo Funciona</a></li>
+          <li class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+          <li class="nav__item"><a href="profesionales.html" class="nav__link">Para Profesionales</a></li>
+          <li class="nav__item nav__item--mobile-auth">
+             <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
+          </li>
+           <li class="nav__item nav__item--mobile-auth">
+             <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-heart"></i> Solicitar Ayuda</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="auth-buttons">
+        <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
+        <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-heart"></i> Solicitar Ayuda</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__container">
+        <h2 class="hero__title">Juntos podemos transformar vidas</h2>
+        <p class="hero__text">PROTRED es una plataforma que conecta a personas que necesitan prótesis con donantes, empresas y profesionales dispuestos a ayudar.</p>
+        <div class="hero__buttons">
+          <a href="solicitar-ayuda.html" class="btn btn--primary">Solicitar Ayuda</a>
+          <a href="donar.html" class="btn btn--outline">Hacer una Donación</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--padding">
+      <div class="container">
+          <div class="section-title">
+            <h2>Campañas Destacadas</h2>
+          </div>
+
+          <div class="campaigns">
+            <div class="campaign-card">
+              <img src="https://api.placeholder.com/400/320/ff6b35/ffffff?text=Imagen+Juan" alt="Foto de campaña Juan Pérez" class="campaign-card__img">
+              <div class="campaign-card__content">
+                <h3 class="campaign-card__title">Juan Pérez</h3>
+                <p class="campaign-card__description">Juan perdió su brazo derecho en un accidente laboral y necesita una prótesis para volver a trabajar como electricista.</p>
+
+                <div class="campaign-card__progress progress">
+                  <div class="progress__bar">
+                    <div class="progress__fill" style="width: 70%;"></div>
+                  </div>
+                  <div class="progress__info">
+                    <span>$35,000 recaudados</span>
+                    <span>Meta: $50,000</span>
+                  </div>
+                </div>
+
+                <div class="campaign-card__actions">
+                  <a href="campana-detalle.html?id=1" class="btn btn--primary btn--block">Donar</a>
+                  <a href="campana-detalle.html?id=1" class="btn btn--outline btn--block">Ver Más</a>
+                </div>
+
+                <div class="campaign-card__share share-buttons">
+                  <span>Compartir:</span>
+                  <a href="#" class="share-btn share-btn--facebook" aria-label="Compartir en Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="share-btn share-btn--whatsapp" aria-label="Compartir en WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#" class="share-btn share-btn--instagram" aria-label="Compartir en Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="campaign-card">
+              <img src="https://api.placeholder.com/400/320/004e89/ffffff?text=Imagen+Maria" alt="Foto de campaña María González" class="campaign-card__img">
+              <div class="campaign-card__content">
+                <h3 class="campaign-card__title">María González</h3>
+                <p class="campaign-card__description">María nació sin su pierna izquierda y necesita una prótesis especializada para poder caminar sin limitaciones.</p>
+
+                <div class="campaign-card__progress progress">
+                  <div class="progress__bar">
+                     <div class="progress__fill" style="width: 45%;"></div>
+                  </div>
+                  <div class="progress__info">
+                    <span>$22,500 recaudados</span>
+                    <span>Meta: $50,000</span>
+                  </div>
+                </div>
+
+                <div class="campaign-card__actions">
+                  <a href="campana-detalle.html?id=2" class="btn btn--primary btn--block">Donar</a>
+                  <a href="campana-detalle.html?id=2" class="btn btn--outline btn--block">Ver Más</a>
+                </div>
+
+                <div class="campaign-card__share share-buttons">
+                   <span>Compartir:</span>
+                  <a href="#" class="share-btn share-btn--facebook" aria-label="Compartir en Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="share-btn share-btn--whatsapp" aria-label="Compartir en WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#" class="share-btn share-btn--instagram" aria-label="Compartir en Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="campaign-card">
+                <img src="https://api.placeholder.com/400/320/6bb36b/ffffff?text=Imagen+Roberto" alt="Foto de campaña Roberto Sánchez" class="campaign-card__img">
+              <div class="campaign-card__content">
+                <h3 class="campaign-card__title">Roberto Sánchez</h3>
+                <p class="campaign-card__description">Roberto necesita una prótesis de mano con funcionalidad avanzada para poder retomar su trabajo como artesano.</p>
+
+                <div class="campaign-card__progress progress">
+                  <div class="progress__bar">
+                     <div class="progress__fill" style="width: 90%;"></div>
+                  </div>
+                  <div class="progress__info">
+                    <span>$45,000 recaudados</span>
+                    <span>Meta: $50,000</span>
+                  </div>
+                </div>
+
+                <div class="campaign-card__actions">
+                  <a href="campana-detalle.html?id=3" class="btn btn--primary btn--block">Donar</a>
+                  <a href="campana-detalle.html?id=3" class="btn btn--outline btn--block">Ver Más</a>
+                </div>
+
+                <div class="campaign-card__share share-buttons">
+                  <span>Compartir:</span>
+                  <a href="#" class="share-btn share-btn--facebook" aria-label="Compartir en Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="share-btn share-btn--whatsapp" aria-label="Compartir en WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                  <a href="#" class="share-btn share-btn--instagram" aria-label="Compartir en Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> <div class="section__action text-center mt-40">
+            <a href="campanas.html" class="btn btn--outline">Ver Todas las Campañas</a>
+          </div>
+      </div> </section>
+
+    <section class="how-it-works section section--padding">
+      <div class="container">
+        <div class="section-title">
+          <h2>Cómo Funciona</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <h3 class="step__title">Crea Tu Perfil</h3>
+            <p class="step__text">Completa el formulario contando tu historia y necesidades específicas para una prótesis.</p>
+          </div>
+
+          <div class="step">
+            <div class="step__icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="step__title">Validación</h3>
+            <p class="step__text">Nuestro equipo verificará tu información para asegurar la transparencia de la campaña.</p>
+          </div>
+
+          <div class="step">
+            <div class="step__icon">
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <h3 class="step__title">Comparte</h3>
+            <p class="step__text">Tu historia será visible para donantes y profesionales que quieran ayudar.</p>
+          </div>
+
+          <div class="step">
+            <div class="step__icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="step__title">Recibe Ayuda</h3>
+            <p class="step__text">Recibe donaciones y ofertas de ayuda de profesionales y empresas especializadas.</p>
+          </div>
+        </div> </div> </section>
+
+    <section class="professionals section section--padding">
+      <div class="container">
+        <div class="section-title">
+          <h2>Para Profesionales y Empresas</h2>
+        </div>
+
+        <div class="professionals__content text-center">
+          <p class="mb-30">Si eres profesional de la salud o una empresa que fabrica prótesis, puedes ofrecer descuentos, consultas gratuitas o donaciones a quienes más lo necesitan.</p>
+          <a href="profesionales-registro.html" class="btn btn--primary">Unirse como Profesional</a>
+        </div>
+      </div> </section>
+
+    </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__column">
+          <h3 class="footer__title">PROTRED</h3>
+          <p>Transformando vidas a través de la solidaridad y la tecnología. Unidos podemos lograr que más personas tengan acceso a prótesis de calidad.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__title">Enlaces Rápidos</h3>
+          <ul class="footer__list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="campanas.html">Campañas</a></li>
+            <li><a href="como-funciona.html">Cómo Funciona</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="profesionales.html">Para Profesionales</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__title">Ayuda</h3>
+          <ul class="footer__list">
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+            <li><a href="terminos.html">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__title">Contacto</h3>
+          <address class="footer__address">
+            Email: <a href="mailto:info@protred.org">info@protred.org</a><br>
+            Teléfono: <a href="tel:+5551234567">(555) 123-4567</a><br>
+            Av. Principal #123, Ciudad
+          </address>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 PROTRED. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Script.js"></script>
+</body>
+</html>

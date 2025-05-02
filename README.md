@@ -48,5 +48,3 @@
 - **Base de datos**: (Aun no lo decido).  
 
 ---
-
-## 📂 **Estructura del Proyecto**  

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Inversionista - PROTRED</title>
+    <link rel="stylesheet" href="IndexStyle.css"> <style>
+        .form-container { max-width: 700px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        .form-group input[type="checkbox"] { margin-right: 5px; }
+        .btn-submit { background-color: #004e89; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        .btn-submit:hover { background-color: #003b6a; }
+        fieldset { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 4px; }
+        legend { font-weight: bold; padding: 0 10px; }
+        .note { font-size: 0.9em; color: #666; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Crear Cuenta de Inversionista en PROTRED</h2>
+    <p>Invierte con impacto social y obtén un retorno financiero. Completa el siguiente formulario para comenzar.</p>
+
+    <form action="procesar_registro_inversionista.php" method="POST" id="registroInversionistaForm">
+        
+        <fieldset>
+            <legend>Información Personal</legend>
+            <div class="form-group">
+                <label for="nombreCompletoInversor">Nombre Completo:</label>
+                <input type="text" id="nombreCompletoInversor" name="nombreCompletoInversor" placeholder="Ej: Ana López García" required>
+            </div>
+            <div class="form-group">
+                <label for="emailInversor">Correo Electrónico:</label>
+                <input type="email" id="emailInversor" name="emailInversor" placeholder="tu@correo.com" required>
+            </div>
+            <div class="form-group">
+                <label for="passwordInversor">Contraseña:</label>
+                <input type="password" id="passwordInversor" name="passwordInversor" required minlength="8">
+                <small class="note">Mínimo 8 caracteres, incluye mayúsculas, minúsculas y números.</small>
+            </div>
+            <div class="form-group">
+                <label for="confirmPasswordInversor">Confirmar Contraseña:</label>
+                <input type="password" id="confirmPasswordInversor" name="confirmPasswordInversor" required>
+            </div>
+            <div class="form-group">
+                <label for="telefonoInversor">Teléfono de Contacto:</label>
+                <input type="tel" id="telefonoInversor" name="telefonoInversor" placeholder="+52 55 1234 5678" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimientoInversor">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimientoInversor" name="fechaNacimientoInversor" required>
+            </div>
+            <div class="form-group">
+                <label for="nacionalidadInversor">Nacionalidad:</label>
+                <input type="text" id="nacionalidadInversor" name="nacionalidadInversor" placeholder="Ej: Mexicana" required>
+            </div>
+            <div class="form-group">
+                <label for="paisResidenciaInversor">País de Residencia:</label>
+                <input type="text" id="paisResidenciaInversor" name="paisResidenciaInversor" placeholder="Ej: México" required>
+            </div>
+            <div class="form-group">
+                <label for="direccionCompletaInversor">Dirección Completa (Calle, Número, Colonia, C.P., Ciudad, Estado):</label>
+                <textarea id="direccionCompletaInversor" name="direccionCompletaInversor" rows="3" placeholder="Calle Ejemplo 123, Col. Centro, 06000, Ciudad de México, CDMX" required></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Perfil de Inversión</legend>
+            <div class="form-group">
+                <label for="tipoInversionista">Tipo de Inversionista:</label>
+                <select id="tipoInversionista" name="tipoInversionista" required>
+                    <option value="">Seleccione una opción...</option>
+                    <option value="individual">Persona Física (Individual)</option>
+                    <option value="empresa">Persona Moral (Empresa/Institución)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="origenFondosInversor">Origen Principal de los Fondos a Invertir:</label>
+                <select id="origenFondosInversor" name="origenFondosInversor" required>
+                    <option value="">Seleccione una opción...</option>
+                    <option value="ahorros">Ahorros Personales</option>
+                    <option value="ingresos_laborales">Ingresos Laborales</option>
+                    <option value="inversiones_previas">Rendimiento de Inversiones Previas</option>
+                    <option value="herencia_donacion">Herencia / Donación</option>
+                    <option value="otros">Otros (especificar)</option>
+                </select>
+                </div>
+             <div class="form-group">
+                <label for="experienciaInversion">Experiencia en Inversiones:</label>
+                <select id="experienciaInversion" name="experienciaInversion" required>
+                    <option value="">Seleccione una opción...</option>
+                    <option value="principiante">Principiante (Poca o ninguna experiencia)</option>
+                    <option value="intermedio">Intermedia (Alguna experiencia, conozco los riesgos básicos)</option>
+                    <option value="avanzado">Avanzada (Amplia experiencia, gestiono portafolios)</option>
+                </select>
+            </div>
+            </fieldset>
+
+        <fieldset>
+            <legend>Acuerdos y Verificación</legend>
+            <div class="form-group">
+                <p class="note">Después del registro, solicitaremos documentos para verificar tu identidad (INE/Pasaporte, Comprobante de Domicilio) como parte de nuestros procesos de seguridad y cumplimiento normativo.</p>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="aceptoTerminosInversor" name="aceptoTerminosInversor" value="acepto" required>
+                <label for="aceptoTerminosInversor">He leído y acepto los <a href="terminos-inversion.html" target="_blank">Términos de Inversión</a> y la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a> de PROTRED.</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="aceptoRiesgosInversor" name="aceptoRiesgosInversor" value="acepto" required>
+                <label for="aceptoRiesgosInversor">Comprendo que toda inversión conlleva riesgos, incluyendo la posible pérdida del capital invertido.</label>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn--primary btn--lg btn-submit">Crear Cuenta de Inversionista</button>
+    </form>
+</div>
+</body>
+</html>

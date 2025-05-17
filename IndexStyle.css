@@ -1,18 +1,16 @@
-/* === Variables CSS === */
 :root {
-  --primary: #FF6B35;   /* Naranja cálido como color principal */
-  --secondary: #004E89; /* Azul para contraste */
-  --accent: #6BB36B;    /* Verde esperanza para acentos */
-  --light: #F9F7F3;     /* Fondo claro */
-  --dark: #232323;      /* Texto oscuro */
-  --gray: #E6E6E6;      /* Gris claro para fondos secundarios */
+  --primary: #FF6B35;
+  --secondary: #004E89;
+  --accent: #6BB36B;
+  --light: #F9F7F3;
+  --dark: #232323;
+  --gray: #E6E6E6;
   --white: #FFFFFF;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   --font-primary: 'Segoe UI', 'Roboto', sans-serif;
   --transition-speed: 0.3s;
 }
 
-/* === Reseteo Básico y Estilos Globales === */
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +18,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* Desplazamiento suave */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,13 +26,13 @@ body {
   background-color: var(--light);
   color: var(--dark);
   line-height: 1.6;
-  font-size: 16px; /* Base font size */
+  font-size: 16px;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  display: block; /* Evita espacio extra debajo de las imágenes */
+  display: block;
 }
 
 a {
@@ -47,22 +45,31 @@ a:hover {
   color: var(--secondary);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: 1.3;
   margin-bottom: 0.75em;
   font-weight: 700;
   color: var(--secondary);
 }
 
-h1 { font-size: 2.5rem; } /* ~40px */
-h2 { font-size: 2rem; }   /* ~32px */
-h3 { font-size: 1.25rem; } /* ~20px */
-
-ul {
-    list-style: none;
+h1 {
+  font-size: 2.5rem;
 }
 
-/* === Contenedor Principal === */
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+ul {
+  list-style: none;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -70,7 +77,6 @@ ul {
   padding: 0 20px;
 }
 
-/* === Clases Utilitarias === */
 .text-center {
   text-align: center;
 }
@@ -83,14 +89,12 @@ ul {
   margin-bottom: 30px;
 }
 
-/* === Estilos de Secciones === */
 .section {
-    /* Padding por defecto, puede ser sobreescrito por modificadores */
-    padding: 60px 0;
+  padding: 60px 0;
 }
 
 .section--padding {
-    padding: 80px 0;
+  padding: 80px 0;
 }
 
 .section-title {
@@ -117,7 +121,6 @@ ul {
   border-radius: 2px;
 }
 
-/* === Header y Navegación === */
 .header {
   background-color: var(--white);
   box-shadow: var(--shadow);
@@ -147,7 +150,7 @@ ul {
   font-size: 24px;
   font-weight: 700;
   color: var(--primary);
-  margin-bottom: 0; /* Reset margin for h1 in logo */
+  margin-bottom: 0;
 }
 
 .nav__list {
@@ -157,18 +160,18 @@ ul {
 .nav__item {
   margin-left: 25px;
 }
-/* Ocultar botones de auth en el nav por defecto */
+
 .nav__item--mobile-auth {
-    display: none;
+  display: none;
 }
 
 .nav__link {
   color: var(--dark);
   font-weight: 500;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
   transition: all var(--transition-speed) ease;
   position: relative;
-  padding-bottom: 8px; /* Espacio para la línea inferior */
+  padding-bottom: 8px;
 }
 
 .nav__link:hover {
@@ -180,40 +183,39 @@ ul {
   position: absolute;
   width: 0;
   height: 2px;
-  bottom: 0; /* Ajustado para estar justo debajo del texto */
+  bottom: 0;
   left: 0;
   background-color: var(--primary);
   transition: width var(--transition-speed) ease;
 }
 
-.nav__link:hover::after, .nav__link.active::after {
+.nav__link:hover::after,
+.nav__link.active::after {
   width: 100%;
 }
 
-/* Botones de Autenticación (Desktop) */
 .auth-buttons {
   display: flex;
   gap: 10px;
 }
 
-/* Botón General */
 .btn {
   padding: 10px 20px;
   border-radius: 50px;
   font-weight: 500;
   transition: all var(--transition-speed) ease;
-  border: 2px solid transparent; /* Borde base transparente */
+  border: 2px solid transparent;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  font-size: 0.9rem; /* ~14.4px */
-  line-height: 1.2; /* Ajuste para alinear texto e icono */
+  font-size: 0.9rem;
+  line-height: 1.2;
 }
 
 .btn i {
-    font-size: 1em; /* Icono relativo al tamaño del texto del botón */
+  font-size: 1em;
 }
 
 .btn--primary {
@@ -223,7 +225,7 @@ ul {
 }
 
 .btn--primary:hover {
-  background-color: #ff5a20; /* Un poco más oscuro */
+  background-color: #ff5a20;
   border-color: #ff5a20;
   color: var(--white);
   transform: translateY(-2px);
@@ -243,25 +245,20 @@ ul {
   box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
 }
 
-/* Modificador para botones que ocupan todo el ancho en su contenedor */
 .btn--block {
-    flex: 1; /* Ocupa el espacio disponible en un flex container */
-    /* width: 100%; si no está en flex */
+  flex: 1;
 }
 
-
-/* Menú Móvil */
 .mobile-menu {
-  display: none; /* Oculto por defecto */
+  display: none;
   font-size: 24px;
   cursor: pointer;
   color: var(--dark);
   background: none;
   border: none;
-  padding: 5px; /* Área de toque */
+  padding: 5px;
 }
 
-/* === Hero Section === */
 .hero {
   background: linear-gradient(to right, rgba(255, 107, 53, 0.8), rgba(0, 78, 137, 0.8)), url('https://api.placeholder.com/1200/600/cccccc/ffffff?text=Hero+Background') no-repeat center center;
   background-size: cover;
@@ -271,30 +268,29 @@ ul {
 }
 
 .hero__title {
-  font-size: clamp(2rem, 5vw, 2.625rem); /* Responsive font size (min 32px, grows, max 42px) */
+  font-size: clamp(2rem, 5vw, 2.625rem);
   margin-bottom: 20px;
   font-weight: 800;
-  color: var(--white); /* Título en blanco sobre fondo oscuro */
+  color: var(--white);
 }
 
 .hero__text {
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.125rem;
   margin-bottom: 30px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0.9; /* Ligera transparencia */
+  opacity: 0.9;
 }
 
 .hero__buttons {
   display: flex;
-  flex-wrap: wrap; /* Para móviles */
+  flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
   margin-top: 30px;
 }
 
-/* === Sección Campañas === */
 .campaigns {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -309,7 +305,7 @@ ul {
   box-shadow: var(--shadow);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
   display: flex;
-  flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+  flex-direction: column;
 }
 
 .campaign-card:hover {
@@ -325,25 +321,24 @@ ul {
 
 .campaign-card__content {
   padding: 20px;
-  flex-grow: 1; /* Permite que el contenido crezca para llenar el espacio */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
 .campaign-card__title {
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem;
   margin-bottom: 10px;
   color: var(--secondary);
 }
 
 .campaign-card__description {
-    font-size: 0.95rem; /* ~15px */
-    margin-bottom: 15px;
-    flex-grow: 1; /* Empuja acciones y barra de progreso hacia abajo */
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  flex-grow: 1;
 }
 
-/* Barra de progreso */
-.progress { /* Renombrado de .campaign-progress para reutilización */
+.progress {
   margin: 15px 0;
 }
 
@@ -359,37 +354,34 @@ ul {
   height: 100%;
   background-color: var(--accent);
   border-radius: 4px;
-  transition: width 0.5s ease-out; /* Animación suave del progreso */
-  /* El width se establece inline o con JS */
+  transition: width 0.5s ease-out;
 }
 
 .progress__info {
   display: flex;
   justify-content: space-between;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   color: #555;
 }
 
-/* Acciones de la tarjeta */
 .campaign-card__actions {
   display: flex;
   gap: 10px;
-  margin-top: 15px; /* Separación de la barra de progreso */
+  margin-top: 15px;
 }
 
-/* Botones de compartir */
 .share-buttons {
   display: flex;
-  align-items: center; /* Alinea el texto "Compartir:" */
+  align-items: center;
   gap: 10px;
   margin-top: 15px;
-  flex-wrap: wrap; /* Por si no caben */
+  flex-wrap: wrap;
 }
 
 .share-buttons span {
-    font-size: 0.9rem;
-    color: #666;
-    margin-right: 5px;
+  font-size: 0.9rem;
+  color: #666;
+  margin-right: 5px;
 }
 
 .share-btn {
@@ -400,9 +392,9 @@ ul {
   align-items: center;
   justify-content: center;
   color: var(--white);
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
   transition: all 0.2s ease;
-  border: none; /* Asegura que no haya borde por defecto en 'a' */
+  border: none;
 }
 
 .share-btn:hover {
@@ -410,12 +402,18 @@ ul {
   opacity: 0.9;
 }
 
-.share-btn--facebook { background-color: #3b5998; }
-.share-btn--whatsapp { background-color: #25D366; }
-.share-btn--instagram { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); }
+.share-btn--facebook {
+  background-color: #3b5998;
+}
 
+.share-btn--whatsapp {
+  background-color: #25D366;
+}
 
-/* === Sección Cómo Funciona === */
+.share-btn--instagram {
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
 .how-it-works {
   background-color: var(--gray);
   text-align: center;
@@ -458,25 +456,22 @@ ul {
   color: var(--primary);
 }
 
-.step__title { /* Renombrado de h3 */
+.step__title {
   margin-bottom: 15px;
   color: var(--secondary);
 }
 
-.step__text { /* Renombrado de p */
-    font-size: 0.95rem;
+.step__text {
+  font-size: 0.95rem;
 }
 
-
-/* === Sección Profesionales === */
 .professionals__content {
-    max-width: 800px;
-    margin: 0 auto; /* Centrado */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* === Formularios (Estilos base si los añades) === */
 .form-section {
-  background-color: var(--white); /* O el fondo que prefieras */
+  background-color: var(--white);
 }
 
 .form-container {
@@ -534,22 +529,21 @@ ul {
 }
 
 textarea {
-    resize: vertical; /* Permitir redimensionar solo verticalmente */
-    min-height: 120px;
+  resize: vertical;
+  min-height: 120px;
 }
 
 .form-row {
   display: flex;
-  flex-wrap: wrap; /* Para que se apilen en pantallas pequeñas */
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .form-row .form-group {
-  flex: 1; /* Ocupa espacio disponible */
-  min-width: 200px; /* Ancho mínimo antes de apilarse */
+  flex: 1;
+  min-width: 200px;
 }
 
-/* Estilo para carga de archivos */
 .file-upload {
   background-color: var(--gray);
   padding: 20px;
@@ -572,12 +566,12 @@ textarea {
 }
 
 .file-upload span {
-    display: block;
-    color: #555;
+  display: block;
+  color: #555;
 }
 
 .file-upload input[type="file"] {
-  display: none; /* Ocultar el input real */
+  display: none;
 }
 
 .form-submit {
@@ -585,11 +579,9 @@ textarea {
   margin-top: 30px;
 }
 
-
-/* === Footer === */
 .footer {
   background-color: var(--secondary);
-  color: var(--light); /* Texto claro sobre fondo oscuro */
+  color: var(--light);
   padding: 50px 0 20px;
 }
 
@@ -601,11 +593,11 @@ textarea {
 }
 
 .footer__column h3.footer__title {
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.125rem;
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
-  color: var(--white); /* Títulos del footer en blanco */
+  color: var(--white);
 }
 
 .footer__column h3.footer__title::after {
@@ -620,9 +612,9 @@ textarea {
 
 .footer__column p,
 .footer__column address {
-    font-size: 0.95rem;
-    color: #ddd;
-    line-height: 1.7;
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.7;
 }
 
 .footer__list li {
@@ -668,114 +660,115 @@ textarea {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   color: #ccc;
 }
 
-/* === Responsive === */
 @media (max-width: 768px) {
   .header__container {
-    padding: 15px; /* Más padding en móvil */
+    padding: 15px;
   }
 
   .nav {
     position: absolute;
-    top: 100%; /* Se posiciona justo debajo del header */
+    top: 100%;
     left: 0;
     right: 0;
     background-color: var(--white);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    /* Transición para la aparición */
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); /* Transición suave */
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   }
 
   .nav.show {
-     max-height: 100vh; /* Un valor grande para asegurar que quepa todo */
-     transition: max-height 1s ease-in-out; /* Transición suave */
+    max-height: 100vh;
+    transition: max-height 1s ease-in-out;
   }
 
   .nav__list {
     flex-direction: column;
     padding: 20px;
-    align-items: center; /* Centra los items */
+    align-items: center;
   }
 
   .nav__item {
     margin: 10px 0;
-    width: 100%; /* Ocupa todo el ancho */
-    text-align: center; /* Centra el texto del enlace */
+    width: 100%;
+    text-align: center;
   }
 
   .nav__link {
-      display: block; /* Hace que todo el área sea clickeable */
-      padding: 10px 0;
+    display: block;
+    padding: 10px 0;
   }
 
-   /* Mostrar botones de auth en el menú móvil */
   .nav__item--mobile-auth {
     display: block;
     margin-top: 15px;
   }
+
   .nav__item--mobile-auth .btn {
-      width: 80%; /* O un ancho fijo */
-      margin: 5px auto;
+    width: 80%;
+    margin: 5px auto;
   }
 
 
   .mobile-menu {
-    display: block; /* Mostrar el botón de hamburguesa */
+    display: block;
   }
 
   .auth-buttons {
-    display: none; /* Ocultar botones de auth del header en móvil */
+    display: none;
   }
 
   .hero__title {
-     font-size: clamp(1.8rem, 6vw, 2rem); /* Ajuste tamaño para móvil */
+    font-size: clamp(1.8rem, 6vw, 2rem);
   }
 
   .hero__text {
-      font-size: 1rem; /* 16px */
+    font-size: 1rem;
   }
 
   .hero__buttons .btn {
-      width: 80%; /* Botones más anchos en móvil */
-      justify-content: center;
+    width: 80%;
+    justify-content: center;
   }
 
   .campaigns {
-    grid-template-columns: 1fr; /* Una columna en móvil */
+    grid-template-columns: 1fr;
   }
 
   .steps {
-      flex-direction: column; /* Apila los pasos */
-      align-items: center; /* Centra los pasos */
+    flex-direction: column;
+    align-items: center;
   }
 
   .step {
-      width: 90%; /* Más ancho en móvil */
-      max-width: 400px;
+    width: 90%;
+    max-width: 400px;
   }
 
   .form-row {
-    flex-direction: column; /* Apila los campos del formulario */
-    gap: 0; /* Sin espacio extra vertical */
+    flex-direction: column;
+    gap: 0;
   }
+
   .form-row .form-group {
-      margin-bottom: 20px; /* Mantiene el espacio inferior */
+    margin-bottom: 20px;
   }
 
   .footer__content {
-      grid-template-columns: 1fr; /* Una columna en el footer */
-      text-align: center; /* Centra el contenido del footer */
+    grid-template-columns: 1fr;
+    text-align: center;
   }
+
   .footer__column h3.footer__title::after {
-      left: 50%;
-      transform: translateX(-50%); /* Centra la línea del título */
+    left: 50%;
+    transform: translateX(-50%);
   }
+
   .social-links {
-      justify-content: center; /* Centra los iconos sociales */
+    justify-content: center;
   }
 }

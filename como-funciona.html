@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo Funciona - PROTRED | Proceso de Inversión Social</title>
+  <meta name="description" content="Descubre paso a paso cómo funciona PROTRED: desde la creación de una campaña de financiamiento para prótesis hasta la inversión y el impacto social generado.">
+  
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="IndexStyle.css"> <style>
+    /* Estilos específicos para la página "Cómo Funciona" */
+    .how-works-hero {
+      background-color: #eef3f7; /* Un color suave y profesional */
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .how-works-hero h1 {
+      color: #004e89; /* Color principal de PROTRED */
+      margin-bottom: 15px;
+      font-size: 2.8em;
+    }
+    .how-works-hero .subtitle {
+      font-size: 1.2em;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+    }
+
+    .process-section {
+      padding: 50px 0;
+    }
+    .process-section .section-title h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2em;
+      margin-bottom: 40px;
+    }
+    .process-section .section-title i {
+      margin-right: 15px;
+      color: #ff6b35; /* Color de acento de PROTRED */
+    }
+
+    .process-steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .process-step:hover {
+        transform: translateY(-5px);
+    }
+    .process-step .step-number-icon {
+      flex-shrink: 0;
+      width: 80px;
+      height: 80px;
+      background-color: #004e89;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: 25px;
+      font-size: 1.2em; /* Tamaño para el número */
+    }
+    .process-step .step-number-icon i {
+        font-size: 1.8em; /* Tamaño para el ícono */
+        margin-bottom: 5px;
+    }
+    .process-step .step-content h3 {
+      color: #004e89;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.6em;
+    }
+    .process-step .step-content p {
+      line-height: 1.7;
+      color: #555;
+    }
+    /* Alternar la posición del ícono para un look tipo timeline */
+    @media (min-width: 768px) {
+      .process-step:nth-child(odd) .step-number-icon {
+        order: 0; /* A la izquierda por defecto */
+      }
+       .process-step:nth-child(even) {
+        flex-direction: row-reverse; /* Ícono a la derecha */
+      }
+      .process-step:nth-child(even) .step-number-icon {
+        margin-left: 25px;
+        margin-right: 0;
+      }
+      .process-step:nth-child(even) .step-content {
+        text-align: right;
+      }
+    }
+
+
+    .key-principles-section {
+      background-color: #f4f7f6;
+      padding: 50px 0;
+    }
+    .key-principles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .principle-card {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .principle-card i {
+      font-size: 2.5em;
+      color: #ff6b35;
+      margin-bottom: 15px;
+    }
+    .principle-card h4 {
+      color: #004e89;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .cta-how-works {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #004e89; /* Color principal */
+      color: #fff;
+    }
+    .cta-how-works h2 {
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .cta-how-works p {
+        margin-bottom: 25px;
+        font-size: 1.1em;
+    }
+    .cta-how-works .btn {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <h1>PROTRED</h1>
+      </div>
+
+      <button class="mobile-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+          <li class="nav__item"><a href="campanas.html" class="nav__link">Campañas</a></li>
+          <li class="nav__item"><a href="como-funciona.html" class="nav__link active">Cómo Funciona</a></li> <li class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+          <li class="nav__item"><a href="aliados.html" class="nav__link">Fabricantes Aliados</a></li>
+          <li class="nav__item nav__item--mobile-auth">
+            <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
+          </li>
+          <li class="nav__item nav__item--mobile-auth">
+            <a href="invertir.html" class="btn btn--secondary"><i class="fas fa-chart-line" aria-hidden="true"></i> Invertir</a>
+          </li>
+          <li class="nav__item nav__item--mobile-auth">
+            <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Solicitar Financiamiento</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="auth-buttons">
+        <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
+        <a href="invertir.html" class="btn btn--secondary"><i class="fas fa-chart-line" aria-hidden="true"></i> Invertir</a>
+        <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Solicitar Financiamiento</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="how-works-hero">
+      <div class="container">
+        <h1>Descubre Cómo Funciona PROTRED</h1>
+        <p class="subtitle">
+          Hemos diseñado un proceso transparente y colaborativo para conectar necesidades con soluciones, transformando vidas a través de la inversión social. A continuación, te explicamos cada paso.
+        </p>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <div class="container">
+        <div class="section-title">
+          <h2><i class="fas fa-shoe-prints" aria-hidden="true"></i>Nuestro Proceso Paso a Paso</h2>
+        </div>
+        <div class="process-steps-container">
+          
+          <article class="process-step">
+            <div class="step-number-icon">
+              <i class="fas fa-user-edit" aria-hidden="true"></i>
+              <span>Paso 1</span>
+            </div>
+            <div class="step-content">
+              <h3>Registro y Creación de Campaña</h3>
+              <p>Las personas que necesitan una prótesis se registran en nuestra plataforma de forma sencilla. Luego, crean una campaña personalizada donde comparten su historia, sus necesidades específicas, el tipo de prótesis requerida y, si es posible, adjuntan imágenes o videos. Este es el primer paso para dar a conocer su caso a nuestra comunidad.</p>
+            </div>
+          </article>
+
+          <article class="process-step">
+            <div class="step-number-icon">
+              <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+              <span>Paso 2</span>
+            </div>
+            <div class="step-content">
+              <h3>Validación y Asesoramiento</h3>
+              <p>Nuestro equipo especializado en PROTRED revisa y valida cada solicitud de campaña. Verificamos la información, ofrecemos asesoramiento para optimizar la presentación de la campaña y, en conjunto con expertos, proyectamos el monto de financiamiento requerido para la prótesis, asegurando que sea realista y cubra las necesidades.</p>
+            </div>
+          </article>
+
+          <article class="process-step">
+            <div class="step-number-icon">
+              <i class="fas fa-donate" aria-hidden="true"></i>
+              <span>Paso 3</span>
+            </div>
+            <div class="step-content">
+              <h3>Inversión con Propósito</h3>
+              <p>Los inversionistas exploran las campañas activas en la plataforma. Pueden conocer las historias, los objetivos de financiamiento y el impacto potencial. Seleccionan las campañas en las que desean invertir, con la posibilidad de obtener un retorno financiero sobre su inversión, además de la invaluable rentabilidad social.</p>
+            </div>
+          </article>
+
+          <article class="process-step">
+            <div class="step-number-icon">
+              <i class="fas fa-cogs" aria-hidden="true"></i>
+              <span>Paso 4</span>
+            </div>
+            <div class="step-content">
+              <h3>Administración y Fabricación</h3>
+              <p>Una vez que una campaña alcanza su meta de financiamiento, los fondos se administran con total trazabilidad. Nos coordinamos con nuestra red de fabricantes y técnicos aliados, quienes se encargan de diseñar, fabricar y ajustar la prótesis a la medida de las necesidades del beneficiario, utilizando materiales de calidad y tecnología adecuada.</p>
+            </div>
+          </article>
+
+          <article class="process-step">
+            <div class="step-number-icon">
+              <i class="fas fa-handshake" aria-hidden="true"></i>
+              <span>Paso 5</span>
+            </div>
+            <div class="step-content">
+              <h3>Entrega, Seguimiento y Retorno</h3>
+              <p>La prótesis es entregada al beneficiario, quien recibe acompañamiento durante su adaptación. El beneficiario actualiza a la comunidad sobre su progreso y el impacto de la prótesis en su vida. Según el modelo acordado para cada campaña, se gestiona el plan de devolución de la inversión a los participantes, completando así el ciclo de impacto y retorno.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="key-principles-section">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-check-double" aria-hidden="true"></i>Principios Clave de Nuestro Funcionamiento</h2>
+            </div>
+            <div class="key-principles-grid">
+                <div class="principle-card">
+                    <i class="fas fa-eye" aria-hidden="true"></i>
+                    <h4>Transparencia Total</h4>
+                    <p>Cada peso invertido es rastreable. Ofrecemos reportes claros sobre el uso de fondos y el impacto generado.</p>
+                </div>
+                <div class="principle-card">
+                    <i class="fas fa-users-cog" aria-hidden="true"></i>
+                    <h4>Colaboración Activa</h4>
+                    <p>Fomentamos una alianza sólida entre beneficiarios, inversionistas y fabricantes para lograr los mejores resultados.</p>
+                </div>
+                <div class="principle-card">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    <h4>Seguridad y Confianza</h4>
+                    <p>Implementamos procesos seguros y verificamos la información para construir un entorno de confianza para todos.</p>
+                </div>
+                 <div class="principle-card">
+                    <i class="fas fa-chart-pie" aria-hidden="true"></i>
+                    <h4>Impacto Medible</h4>
+                    <p>Nos enfocamos en generar un cambio tangible y medible en la calidad de vida de las personas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-how-works">
+        <div class="container">
+            <h2>¿Listo para Ser Parte del Cambio?</h2>
+            <p>Ahora que conoces cómo funciona PROTRED, te invitamos a dar el siguiente paso.</p>
+            <a href="campanas.html" class="btn btn--secondary btn--lg">Ver Campañas Activas</a>
+            <a href="registro_Inversores.html" class="btn btn--outline btn--lg" style="border-color: #fff; color: #fff;">Registrarme como Inversionista</a>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__column">
+          <h3 class="footer__title">PROTRED</h3>
+          <p>Plataforma de inversión social que conecta a personas con discapacidad que requieren prótesis con inversionistas solidarios y fabricantes aliados.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Visita nuestra página de Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Síguenos en Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Síguenos en Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Conecta con nosotros en LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__title">Enlaces Rápidos</h3>
+          <ul class="footer__list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos de Inversión</a></li>
+            <li><a href="como-funciona.html">Cómo Funciona</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="aliados.html">Fabricantes Aliados</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__title">Para Inversionistas</h3>
+          <ul class="footer__list">
+            <li><a href="por-que-invertir.html">Por qué invertir</a></li>
+            <li><a href="modelo-financiero.html">Modelo financiero</a></li>
+            <li><a href="transparencia.html">Transparencia y trazabilidad</a></li>
+            <li><a href="testimonios-inversores.html">Testimonios</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__title">Documentos Legales</h3>
+          <ul class="footer__list">
+            <li><a href="terminos-inversion.html">Términos de inversión</a></li>
+            <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+            <li><a href="terminos.html">Términos y Condiciones</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__title">Contacto</h3>
+          <address class="footer__address">
+            Email: <a href="mailto:info@protred.org">info@protred.org</a><br>
+            Teléfono: <a href="tel:+525551234567">+52 (555) 123-4567</a><br>
+            Av. Principal #123, Ciudad, México
+          </address>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="currentYear">2025</span> PROTRED. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Script.js" defer></script> <script>
+    // Script para el año actual en el footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Script para el menú móvil (si es el mismo de tu index.html)
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    const nav = document.querySelector('.nav');
+
+    if (mobileMenuButton && nav) {
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            nav.classList.toggle('nav--visible'); // Asumiendo que tienes una clase para mostrar/ocultar
+        });
+    }
+  </script>
+</body>
+</html>

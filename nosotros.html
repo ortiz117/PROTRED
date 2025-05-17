@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - PROTRED | Inversión Social en Prótesis</title>
+  <meta name="description" content="Conoce PROTRED, nuestra misión, cómo funcionamos y el impacto que generamos conectando a personas que necesitan prótesis con inversionistas y fabricantes.">
+  
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="IndexStyle.css"> <style>
+    /* Estilos específicos para la página "Nosotros" pueden ir aquí o en IndexStyle.css */
+    .about-hero {
+      background-color: #f4f7f6; /* Un color suave para el hero */
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .about-hero h1 {
+      color: #004e89; /* Color principal de PROTRED */
+      margin-bottom: 15px;
+      font-size: 2.8em;
+    }
+    .about-hero .mission-statement {
+      font-size: 1.2em;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+    }
+    .about-hero .core-objective {
+      font-size: 1.1em;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    .section-nosotros {
+      padding: 50px 0; /* Reemplaza section--padding si es necesario */
+    }
+    .section-nosotros .section-title h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Centra el título y el icono */
+      font-size: 2.2em;
+    }
+    .section-nosotros .section-title i {
+      margin-right: 15px;
+      color: #ff6b35; /* Color de acento de PROTRED */
+    }
+
+    .value-proposition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .value-card-nosotros {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border-left: 5px solid #004e89; /* Acento de color */
+    }
+    .value-card-nosotros h3 {
+      color: #004e89;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+    .value-card-nosotros ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .value-card-nosotros ul li {
+      padding-left: 25px;
+      position: relative;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .value-card-nosotros ul li::before {
+      content: "\f00c"; /* Icono de check de Font Awesome */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #6bb36b; /* Color verde para el check */
+    }
+
+    .differentiators-list ul, .expected-impact-list ul {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .differentiators-list li, .expected-impact-list li {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 6px;
+      display: flex;
+      align-items: flex-start; /* Alinea ícono y texto */
+    }
+    .differentiators-list li i, .expected-impact-list li i {
+      font-size: 1.5em;
+      color: #004e89;
+      margin-right: 15px;
+      margin-top: 3px; /* Ajuste vertical */
+    }
+
+    .how-it-works-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .how-it-works-step {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+    .how-it-works-step i {
+      font-size: 2.5em;
+      color: #ff6b35;
+      margin-bottom: 15px;
+    }
+    .how-it-works-step h4 {
+      color: #004e89;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+    .cta-nosotros {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #004e89; /* Color principal */
+      color: #fff;
+    }
+    .cta-nosotros h2 {
+        color: #fff;
+        margin-top:0;
+    }
+    .cta-nosotros .btn {
+        margin: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <h1>PROTRED</h1>
+      </div>
+
+      <button class="mobile-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+          <li class="nav__item"><a href="campanas.html" class="nav__link">Campañas</a></li>
+          <li class="nav__item"><a href="como-funciona.html" class="nav__link">Cómo Funciona</a></li>
+          <li class="nav__item"><a href="nosotros.html" class="nav__link active">Nosotros</a></li> <li class="nav__item"><a href="aliados.html" class="nav__link">Fabricantes Aliados</a></li>
+          <li class="nav__item nav__item--mobile-auth">
+            <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
+          </li>
+          <li class="nav__item nav__item--mobile-auth">
+            <a href="invertir.html" class="btn btn--secondary"><i class="fas fa-chart-line" aria-hidden="true"></i> Invertir</a>
+          </li>
+          <li class="nav__item nav__item--mobile-auth">
+            <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Solicitar Financiamiento</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="auth-buttons">
+        <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
+        <a href="invertir.html" class="btn btn--secondary"><i class="fas fa-chart-line" aria-hidden="true"></i> Invertir</a>
+        <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Solicitar Financiamiento</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="container">
+        <h1>Conoce PROTRED</h1>
+        <p class="mission-statement">
+          PROTRED es una plataforma web de inversión social que conecta a personas con discapacidad que requieren una prótesis, con inversionistas solidarios y fabricantes aliados.
+        </p>
+        <p class="core-objective">
+          Nuestro objetivo es financiar prótesis de calidad a través de inversión con retorno, permitiendo a los inversionistas obtener beneficios financieros mientras transforman vidas mediante movilidad, autonomía y dignidad.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-nosotros problem-solved">
+      <div class="container">
+        <div class="section-title">
+          <h2><i class="fas fa-tools" aria-hidden="true"></i>¿Qué Problema Resolvemos?</h2>
+        </div>
+        <p class="text-center" style="max-width: 800px; margin-left:auto; margin-right:auto; font-size:1.1em; line-height:1.7;">
+          Millones de personas no acceden a una prótesis funcional por barreras económicas. PROTRED crea una vía financiera, viable y colaborativa para cerrar esta brecha, combinando inversión, inclusión y tecnología. Creemos firmemente que la falta de recursos no debería ser un impedimento para recuperar la calidad de vida.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-nosotros value-proposition" style="background-color: #f9f9f9;">
+      <div class="container">
+        <div class="section-title">
+          <h2><i class="fas fa-lightbulb" aria-hidden="true"></i>Nuestra Propuesta de Valor</h2>
+        </div>
+        <div class="value-proposition-grid">
+          <div class="value-card-nosotros">
+            <h3>Para Personas que Necesitan Ayuda</h3>
+            <ul>
+              <li>Acceso a campañas de financiamiento por medio de una red de inversión solidaria.</li>
+              <li>Mayor visibilidad de su historia y necesidades, con apoyo en comunicación.</li>
+              <li>Proceso acompañado, transparente y con seguimiento hasta recibir su prótesis.</li>
+            </ul>
+          </div>
+          <div class="value-card-nosotros">
+            <h3>Para Inversionistas</h3>
+            <ul>
+              <li>Oportunidad de generar un retorno financiero anual estimado entre 8% y 12%.</li>
+              <li>Participación en proyectos de alto impacto social, medible y trazable.</li>
+              <li>Reportes detallados del uso de los fondos y seguimiento al impacto generado.</li>
+              <li>Portafolio diversificado con inversiones que transforman vidas.</li>
+            </ul>
+          </div>
+          <div class="value-card-nosotros">
+            <h3>Para Fabricantes y Técnicos</h3>
+            <ul>
+              <li>Acceso directo a proyectos financiados para ofrecer soluciones técnicas reales.</li>
+              <li>Canal para colaborar mediante paquetes preferenciales o con responsabilidad social empresarial (RSE).</li>
+              <li>Visibilidad y posicionamiento como empresa aliada del cambio social.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-nosotros differentiators">
+      <div class="container">
+        <div class="section-title">
+          <h2><i class="fas fa-star" aria-hidden="true"></i>¿Qué Nos Hace Diferentes?</h2>
+        </div>
+        <div class="differentiators-list">
+          <ul>
+            <li><i class="fas fa-hand-holding-usd" aria-hidden="true"></i>Modelo de inversión con retorno y propósito (doble rentabilidad).</li>
+            <li><i class="fas fa-search-dollar" aria-hidden="true"></i>Transparencia total: trazabilidad del dinero y del impacto.</li>
+            <li><i class="fas fa-users" aria-hidden="true"></i>Alianza activa entre beneficiarios, inversionistas y fabricantes.</li>
+            <li><i class="fas fa-laptop-medical" aria-hidden="true"></i>Tecnología como herramienta para inclusión real y sostenible.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-nosotros how-it-works-section" style="background-color: #eef3f7;">
+      <div class="container">
+        <div class="section-title">
+          <h2><i class="fas fa-cogs" aria-hidden="true"></i>¿Cómo Funciona PROTRED?</h2>
+        </div>
+        <div class="how-it-works-steps">
+          <div class="how-it-works-step">
+            <i class="fas fa-user-edit" aria-hidden="true"></i>
+            <h4>1. Registro y Campaña</h4>
+            <p>Personas con discapacidad se registran y crean una campaña detallando su historia, necesidad e imágenes.</p>
+          </div>
+          <div class="how-it-works-step">
+            <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+            <h4>2. Validación</h4>
+            <p>El equipo PROTRED valida la solicitud, asesora y proyecta el monto requerido para la prótesis.</p>
+          </div>
+          <div class="how-it-works-step">
+            <i class="fas fa-donate" aria-hidden="true"></i>
+            <h4>3. Inversión</h4>
+            <p>Inversionistas exploran y seleccionan campañas para financiar, con la opción de obtener un retorno.</p>
+          </div>
+          <div class="how-it-works-step">
+            <i class="fas fa-industry" aria-hidden="true"></i>
+            <h4>4. Fabricación</h4>
+            <p>El dinero se administra con trazabilidad y se ejecuta la fabricación con nuestros aliados técnicos.</p>
+          </div>
+          <div class="how-it-works-step">
+            <i class="fas fa-handshake" aria-hidden="true"></i>
+            <h4>5. Entrega y Retorno</h4>
+            <p>Se entrega la prótesis, el beneficiario actualiza su estado y se gestiona el retorno de la inversión según lo acordado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-nosotros expected-impact">
+      <div class="container">
+        <div class="section-title">
+          <h2><i class="fas fa-seedling" aria-hidden="true"></i>Nuestro Impacto Esperado</h2>
+        </div>
+        <div class="expected-impact-list">
+          <ul>
+            <li><i class="fas fa-wheelchair-move" aria-hidden="true"></i>Aumentar la movilidad, independencia y calidad de vida de personas con discapacidad.</li>
+            <li><i class="fas fa-universal-access" aria-hidden="true"></i>Democratizar el acceso a prótesis a través de modelos financieros sostenibles e inclusivos.</li>
+            <li><i class="fas fa-people-carry-box" aria-hidden="true"></i>Construir una red sólida donde cada peso invertido se convierte en valor humano tangible.</li>
+            <li><i class="fas fa-heart-pulse" aria-hidden="true"></i>Promover la empatía, la inclusión social y la inversión consciente y con propósito.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-nosotros">
+        <div class="container">
+            <h2>Únete a la Transformación</h2>
+            <p>Ya sea que necesites apoyo, desees invertir con impacto o quieras aliarte como fabricante, hay un lugar para ti en PROTRED.</p>
+            <a href="registro_Inversores.html" class="btn btn--secondary btn--lg">Quiero Invertir</a>
+            <a href="solicitar-ayuda.html" class="btn btn--primary btn--lg">Necesito Financiamiento</a>
+            <a href="aliados.html" class="btn btn--outline btn--lg" style="border-color: #fff; color: #fff;">Ser Aliado Fabricante</a>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__column">
+          <h3 class="footer__title">PROTRED</h3>
+          <p>Plataforma de inversión social que conecta a personas con discapacidad que requieren prótesis con inversionistas solidarios y fabricantes aliados.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Visita nuestra página de Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Síguenos en Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Síguenos en Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Conecta con nosotros en LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__title">Enlaces Rápidos</h3>
+          <ul class="footer__list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos de Inversión</a></li>
+            <li><a href="como-funciona.html">Cómo Funciona</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="aliados.html">Fabricantes Aliados</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__title">Para Inversionistas</h3>
+          <ul class="footer__list">
+            <li><a href="por-que-invertir.html">Por qué invertir</a></li>
+            <li><a href="modelo-financiero.html">Modelo financiero</a></li>
+            <li><a href="transparencia.html">Transparencia y trazabilidad</a></li>
+            <li><a href="testimonios-inversores.html">Testimonios</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__title">Documentos Legales</h3>
+          <ul class="footer__list">
+            <li><a href="terminos-inversion.html">Términos de inversión</a></li>
+            <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+            <li><a href="terminos.html">Términos y Condiciones</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__title">Contacto</h3>
+          <address class="footer__address">
+            Email: <a href="mailto:info@protred.org">info@protred.org</a><br>
+            Teléfono: <a href="tel:+525551234567">+52 (555) 123-4567</a><br>
+            Av. Principal #123, Ciudad, México
+          </address>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; <span id="currentYear">2025</span> PROTRED. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Script.js" defer></script> <script>
+    // Script para el año actual en el footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Script para el menú móvil (si es el mismo de tu index.html)
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    const nav = document.querySelector('.nav');
+
+    if (mobileMenuButton && nav) {
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            nav.classList.toggle('nav--visible'); 
+        });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Aliado Fabricante - PROTRED</title>
+    <link rel="stylesheet" href="IndexStyle.css"> <style>
+        /* Estilos básicos para mejorar la legibilidad del formulario (puedes reutilizar los de arriba) */
+        .form-container { max-width: 700px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"],
+        .form-group input[type="tel"],
+        .form-group input[type="url"],
+        .form-group select,
+        .form-group textarea,
+        .form-group input[type="file"] { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        .form-group input[type="checkbox"] { margin-right: 5px; }
+        .form-group .checkbox-group label { font-weight: normal; margin-right: 15px; }
+        .btn-submit { background-color: #6bb36b; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        .btn-submit:hover { background-color: #569457; }
+        fieldset { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 4px; }
+        legend { font-weight: bold; padding: 0 10px; }
+        .note { font-size: 0.9em; color: #666; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Únete como Aliado Fabricante a PROTRED</h2>
+    <p>Forma parte de nuestra red de expertos en prótesis y accede a proyectos financiados. Completa el formulario para registrar tu empresa o taller.</p>
+
+    <form action="procesar_registro_fabricante.php" method="POST" enctype="multipart/form-data" id="registroFabricanteForm">
+        
+        <fieldset>
+            <legend>Información de la Empresa/Taller</legend>
+            <div class="form-group">
+                <label for="nombreEmpresa">Nombre Comercial o Razón Social:</label>
+                <input type="text" id="nombreEmpresa" name="nombreEmpresa" placeholder="Ej: Protesis Avanzadas S.A. de C.V." required>
+            </div>
+            <div class="form-group">
+                <label for="rfcFabricante">RFC (Registro Federal de Contribuyentes):</label>
+                <input type="text" id="rfcFabricante" name="rfcFabricante" placeholder="Ej: PAVA800101ABC" required pattern="[A-Z&Ñ]{3,4}[0-9]{2}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])[A-Z0-9]{2}[0-9A]">
+            </div>
+            <div class="form-group">
+                <label for="direccionEmpresa">Dirección Fiscal Completa:</label>
+                <textarea id="direccionEmpresa" name="direccionEmpresa" rows="3" placeholder="Calle Industrial 100, Parque Industrial X, 76000, Querétaro, Qro." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="telefonoEmpresa">Teléfono Principal de la Empresa:</label>
+                <input type="tel" id="telefonoEmpresa" name="telefonoEmpresa" placeholder="+52 442 123 4567" required>
+            </div>
+            <div class="form-group">
+                <label for="emailEmpresa">Correo Electrónico General de la Empresa:</label>
+                <input type="email" id="emailEmpresa" name="emailEmpresa" placeholder="contacto@tuempresa.com" required>
+            </div>
+            <div class="form-group">
+                <label for="websiteEmpresa">Sitio Web (Opcional):</label>
+                <input type="url" id="websiteEmpresa" name="websiteEmpresa" placeholder="https://www.tuempresa.com">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Información de la Persona de Contacto Principal</legend>
+            <div class="form-group">
+                <label for="nombreContacto">Nombre Completo del Contacto:</label>
+                <input type="text" id="nombreContacto" name="nombreContacto" placeholder="Ej: Ing. Roberto Morales" required>
+            </div>
+            <div class="form-group">
+                <label for="puestoContacto">Puesto/Cargo del Contacto:</label>
+                <input type="text" id="puestoContacto" name="puestoContacto" placeholder="Ej: Director General, Gerente de Ventas" required>
+            </div>
+            <div class="form-group">
+                <label for="emailContacto">Correo Electrónico del Contacto:</label>
+                <input type="email" id="emailContacto" name="emailContacto" placeholder="roberto.morales@tuempresa.com" required>
+            </div>
+            <div class="form-group">
+                <label for="telefonoContacto">Teléfono Directo del Contacto (Opcional):</label>
+                <input type="tel" id="telefonoContacto" name="telefonoContacto" placeholder="+52 442 765 4321">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experiencia y Servicios</legend>
+            <div class="form-group">
+                <label>Tipos de Prótesis que Fabrican/Adaptan (Selecciona todas las aplicables):</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="protesisMiembroSuperior" name="tipoProtesisFabricadas[]" value="miembro_superior"> <label for="protesisMiembroSuperior">Miembro Superior (brazo, mano, dedos)</label><br>
+                    <input type="checkbox" id="protesisMiembroInferior" name="tipoProtesisFabricadas[]" value="miembro_inferior"> <label for="protesisMiembroInferior">Miembro Inferior (pierna, pie)</label><br>
+                    <input type="checkbox" id="protesisDeportivas" name="tipoProtesisFabricadas[]" value="deportivas"> <label for="protesisDeportivas">Prótesis Deportivas</label><br>
+                    <input type="checkbox" id="protesisMioelectricas" name="tipoProtesisFabricadas[]" value="mioelectricas"> <label for="protesisMioelectricas">Prótesis Mioeléctricas</label><br>
+                    <input type="checkbox" id="protesisCosmeticas" name="tipoProtesisFabricadas[]" value="cosmeticas"> <label for="protesisCosmeticas">Prótesis Cosméticas</label><br>
+                    <input type="checkbox" id="otrosTiposProtesis" name="tipoProtesisFabricadas[]" value="otros_tipos"> <label for="otrosTiposProtesis">Otros (especificar)</label>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label for="anosExperiencia">Años de Experiencia en el Sector:</label>
+                <input type="number" id="anosExperiencia" name="anosExperiencia" min="1" placeholder="Ej: 10" required>
+            </div>
+            <div class="form-group">
+                <label for="certificaciones">Certificaciones y Acreditaciones Relevantes:</label>
+                <textarea id="certificaciones" name="certificaciones" rows="3" placeholder="Ej: Certificación ISO 9001, Profesional Certificado por [Organismo], etc."></textarea>
+                <small class="note">Podrás subir los documentos de certificación una vez creada tu cuenta.</small>
+            </div>
+             <div class="form-group">
+                <label for="areaCobertura">Área Geográfica de Cobertura/Servicio:</label>
+                <input type="text" id="areaCobertura" name="areaCobertura" placeholder="Ej: Ciudad de México y Área Metropolitana, Nivel Nacional, Bajío" required>
+            </div>
+            <div class="form-group">
+                <label for="perfilEmpresa">Breve Perfil de la Empresa/Taller:</label>
+                <textarea id="perfilEmpresa" name="perfilEmpresa" rows="4" placeholder="Describe tu misión, especialidades, tecnologías que utilizan, etc." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="logoEmpresa">Logo de la Empresa (Opcional):</label>
+                <input type="file" id="logoEmpresa" name="logoEmpresa" accept="image/jpeg,image/png,image/svg+xml">
+                <small class="note">Formato JPG, PNG o SVG. Máximo 1MB.</small>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Credenciales de Acceso a la Plataforma</legend>
+            <div class="form-group">
+                <label for="emailAccesoFabricante">Correo Electrónico para Acceso (puede ser el del contacto):</label>
+                <input type="email" id="emailAccesoFabricante" name="emailAccesoFabricante" required>
+            </div>
+            <div class="form-group">
+                <label for="passwordFabricante">Crear Contraseña:</label>
+                <input type="password" id="passwordFabricante" name="passwordFabricante" required minlength="8">
+                 <small class="note">Mínimo 8 caracteres.</small>
+            </div>
+            <div class="form-group">
+                <label for="confirmPasswordFabricante">Confirmar Contraseña:</label>
+                <input type="password" id="confirmPasswordFabricante" name="confirmPasswordFabricante" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Acuerdos</legend>
+            <div class="form-group">
+                <input type="checkbox" id="aceptoTerminosFabricante" name="aceptoTerminosFabricante" value="acepto" required>
+                <label for="aceptoTerminosFabricante">He leído y acepto el <a href="acuerdo-alianza.html" target="_blank">Acuerdo de Alianza para Fabricantes</a>, los <a href="terminos-condiciones.html" target="_blank">Términos y Condiciones</a> y la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a> de PROTRED.</label>
+            </div>
+             <div class="form-group">
+                <input type="checkbox" id="veracidadInfoFabricante" name="veracidadInfoFabricante" value="acepto" required>
+                <label for="veracidadInfoFabricante">Declaro que toda la información proporcionada es veraz y representa fielmente a mi empresa/taller.</label>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn--primary btn--lg btn-submit">Registrarme como Aliado Fabricante</button>
+    </form>
+</div>
+</body>
+</html>

@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PROTRED - Una mano para quien lo necesita</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>PROTRED - Inversión Social en Prótesis con Impacto</title>
+  <meta name="description" content="PROTRED: Conectamos inversionistas con personas que necesitan prótesis. Invierte con un retorno financiero (8-12% anual estimado) y transforma vidas. Transparencia y impacto social medible.">
+  <meta name="keywords" content="inversión social, prótesis, impacto social, retorno financiero, crowdfunding, discapacidad, tecnología médica, finanzas éticas">
+  
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="IndexStyle.css">
-</head>
+  
+  </head>
 <body>
   <header class="header">
     <div class="container header__container">
@@ -14,29 +19,33 @@
         <h1>PROTRED</h1>
       </div>
 
-      <button class="mobile-menu" aria-label="Abrir menú" aria-expanded="false">
-        <i class="fas fa-bars"></i>
+      <button class="mobile-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
 
-      <nav class="nav">
+      <nav class="nav" id="main-nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="index.html" class="nav__link active">Inicio</a></li>
           <li class="nav__item"><a href="campanas.html" class="nav__link">Campañas</a></li>
           <li class="nav__item"><a href="como-funciona.html" class="nav__link">Cómo Funciona</a></li>
           <li class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></li>
-          <li class="nav__item"><a href="profesionales.html" class="nav__link">Para Profesionales</a></li>
+          <li class="nav__item"><a href="aliados.html" class="nav__link">Fabricantes Aliados</a></li>
           <li class="nav__item nav__item--mobile-auth">
-             <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
+            <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
           </li>
-           <li class="nav__item nav__item--mobile-auth">
-             <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-heart"></i> Solicitar Ayuda</a>
+          <li class="nav__item nav__item--mobile-auth">
+            <a href="registro_Inversores.html" class="btn btn--secondary"><i class="fas fa-chart-line" aria-hidden="true"></i> Invertir</a>
+          </li>
+          <li class="nav__item nav__item--mobile-auth">
+            <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Solicitar Financiamiento</a>
           </li>
         </ul>
       </nav>
 
       <div class="auth-buttons">
         <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
-        <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-heart"></i> Solicitar Ayuda</a>
+        <a href="registro_Inversores.html" class="btn btn--secondary"><i class="fas fa-chart-line" aria-hidden="true"></i> Invertir</a>
+        <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Solicitar Financiamiento</a>
       </div>
     </div>
   </header>
@@ -44,181 +53,388 @@
   <main>
     <section class="hero">
       <div class="container hero__container">
-        <h2 class="hero__title">Juntos podemos transformar vidas</h2>
-        <p class="hero__text">PROTRED es una plataforma que conecta a personas que necesitan prótesis con donantes, empresas y profesionales dispuestos a ayudar.</p>
+        <h2 class="hero__title">Inversión social con impacto y retorno</h2>
+        <p class="hero__text">PROTRED conecta a personas que necesitan prótesis con inversionistas que buscan un retorno financiero mientras transforman vidas.</p>
+        <div class="hero__stats">
+          <div class="stat-item">
+            <span class="stat-number">8-12%</span>
+            <span class="stat-label">Retorno anual estimado</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Trazabilidad de fondos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3X</span>
+            <span class="stat-label">Impacto en calidad de vida</span>
+          </div>
+        </div>
         <div class="hero__buttons">
-          <a href="solicitar-ayuda.html" class="btn btn--primary">Solicitar Ayuda</a>
-          <a href="donar.html" class="btn btn--outline">Hacer una Donación</a>
+          <a href="registro_Inversores.html" class="btn btn--secondary btn--lg"><i class="fas fa-chart-line" aria-hidden="true"></i> Invertir</a>
+          <a href="solicitar-ayuda.html" class="btn btn--primary btn--lg"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i> Solicitar Financiamiento</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-prop section section--padding">
+      <div class="container">
+        <div class="section-title">
+          <h2>¿Por qué elegir PROTRED?</h2>
+        </div>
+        
+        <div class="value-cards">
+          <div class="value-card">
+            <div class="value-card__icon">
+              <i class="fas fa-coins" aria-hidden="true"></i>
+            </div>
+            <h3>Retorno Financiero</h3>
+            <p>Oportunidad de invertir con un retorno anual estimado entre 8% y 12%, mientras generas un impacto social real.</p>
+          </div>
+          
+          <div class="value-card">
+            <div class="value-card__icon">
+              <i class="fas fa-chart-line" aria-hidden="true"></i>
+            </div>
+            <h3>Inversión Transparente</h3>
+            <p>Seguimiento detallado de tu inversión con reportes periódicos sobre el uso de fondos y el impacto generado.</p>
+          </div>
+          
+          <div class="value-card">
+            <div class="value-card__icon">
+              <i class="fas fa-hands-helping" aria-hidden="true"></i>
+            </div>
+            <h3>Impacto Social</h3>
+            <p>Cada peso invertido transforma directamente la vida de una persona al darle movilidad, autonomía y dignidad.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section section--padding">
       <div class="container">
-          <div class="section-title">
-            <h2>Campañas Destacadas</h2>
-          </div>
+        <div class="section-title">
+          <h2>Proyectos de Inversión Destacados</h2>
+        </div>
 
-          <div class="campaigns">
-            <div class="campaign-card">
-              <img src="https://api.placeholder.com/400/320/ff6b35/ffffff?text=Imagen+Juan" alt="Foto de campaña Juan Pérez" class="campaign-card__img">
-              <div class="campaign-card__content">
-                <h3 class="campaign-card__title">Juan Pérez</h3>
-                <p class="campaign-card__description">Juan perdió su brazo derecho en un accidente laboral y necesita una prótesis para volver a trabajar como electricista.</p>
+        <div class="campaigns">
+          <article class="campaign-card">
+            <div class="campaign-tag">ROI Estimado: 10%</div>
+            <img src="images/juan-perez-real.jpg" alt="Juan Pérez, beneficiario del proyecto de prótesis de brazo." class="campaign-card__img">
+            <div class="campaign-card__content">
+              <h3 class="campaign-card__title">Juan Pérez</h3>
+              <p class="campaign-card__description">Juan perdió su brazo derecho en un accidente laboral y necesita una prótesis para volver a trabajar como electricista. Su reintegración laboral asegura el retorno de inversión.</p>
 
-                <div class="campaign-card__progress progress">
-                  <div class="progress__bar">
-                    <div class="progress__fill" style="width: 70%;"></div>
-                  </div>
-                  <div class="progress__info">
-                    <span>$35,000 recaudados</span>
-                    <span>Meta: $50,000</span>
-                  </div>
+              <div class="campaign-card__details">
+                <div class="detail-item">
+                  <span class="detail-label">Plazo de inversión:</span>
+                  <span class="detail-value">24 meses</span>
                 </div>
-
-                <div class="campaign-card__actions">
-                  <a href="campana-detalle.html?id=1" class="btn btn--primary btn--block">Donar</a>
-                  <a href="campana-detalle.html?id=1" class="btn btn--outline btn--block">Ver Más</a>
+                <div class="detail-item">
+                  <span class="detail-label">Fabricante asignado:</span>
+                  <span class="detail-value">TechnoLimb</span>
                 </div>
+              </div>
 
-                <div class="campaign-card__share share-buttons">
+              <div class="campaign-card__progress progress">
+                <div class="progress__bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Progreso del financiamiento: 70%">
+                  <div class="progress__fill" style="width: 70%;"></div>
+                </div>
+                <div class="progress__info">
+                  <span>$35,000 MXN financiados</span> <span>Meta: $50,000 MXN</span>
+                </div>
+              </div>
+
+              <div class="campaign-card__actions">
+                <a href="proyecto-detalle.html?id=1" class="btn btn--secondary btn--block">Invertir en Juan</a>
+                <a href="proyecto-detalle.html?id=1" class="btn btn--outline btn--block">Ver Análisis de Riesgo</a>
+              </div>
+
+              <div class="campaign-card__share share-buttons">
+                <span>Compartir:</span>
+                <a href="#" class="share-btn share-btn--facebook" aria-label="Compartir proyecto de Juan Pérez en Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" class="share-btn share-btn--whatsapp" aria-label="Compartir proyecto de Juan Pérez en WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="#" class="share-btn share-btn--linkedin" aria-label="Compartir proyecto de Juan Pérez en LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="campaign-card">
+            <div class="campaign-tag">ROI Estimado: 9%</div>
+            <img src="images/maria-gonzalez-real.jpg" alt="María González, beneficiaria del proyecto de prótesis de pierna." class="campaign-card__img">
+            <div class="campaign-card__content">
+              <h3 class="campaign-card__title">María González</h3>
+              <p class="campaign-card__description">María nació sin su pierna izquierda y necesita una prótesis especializada para poder caminar sin limitaciones y completar su formación universitaria.</p>
+              
+              <div class="campaign-card__details">
+                 <div class="detail-item">
+                  <span class="detail-label">Plazo de inversión:</span>
+                  <span class="detail-value">36 meses</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Fabricante asignado:</span>
+                  <span class="detail-value">MobiliTech</span>
+                </div>
+              </div>
+
+              <div class="campaign-card__progress progress">
+                <div class="progress__bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" aria-label="Progreso del financiamiento: 45%">
+                    <div class="progress__fill" style="width: 45%;"></div>
+                </div>
+                <div class="progress__info">
+                  <span>$22,500 MXN financiados</span>
+                  <span>Meta: $50,000 MXN</span>
+                </div>
+              </div>
+
+              <div class="campaign-card__actions">
+                <a href="proyecto-detalle.html?id=2" class="btn btn--secondary btn--block">Invertir en María</a>
+                <a href="proyecto-detalle.html?id=2" class="btn btn--outline btn--block">Ver Análisis de Riesgo</a>
+              </div>
+
+              <div class="campaign-card__share share-buttons">
                   <span>Compartir:</span>
-                  <a href="#" class="share-btn share-btn--facebook" aria-label="Compartir en Facebook"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="share-btn share-btn--whatsapp" aria-label="Compartir en WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                  <a href="#" class="share-btn share-btn--instagram" aria-label="Compartir en Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
+                <a href="#" class="share-btn share-btn--facebook" aria-label="Compartir proyecto de María González en Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" class="share-btn share-btn--whatsapp" aria-label="Compartir proyecto de María González en WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="#" class="share-btn share-btn--linkedin" aria-label="Compartir proyecto de María González en LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
               </div>
             </div>
+          </article>
 
-            <div class="campaign-card">
-              <img src="https://api.placeholder.com/400/320/004e89/ffffff?text=Imagen+Maria" alt="Foto de campaña María González" class="campaign-card__img">
-              <div class="campaign-card__content">
-                <h3 class="campaign-card__title">María González</h3>
-                <p class="campaign-card__description">María nació sin su pierna izquierda y necesita una prótesis especializada para poder caminar sin limitaciones.</p>
+          <article class="campaign-card">
+            <div class="campaign-tag">ROI Estimado: 12%</div>
+            <img src="images/roberto-sanchez-real.jpg" alt="Roberto Sánchez, beneficiario del proyecto de prótesis de mano." class="campaign-card__img">
+            <div class="campaign-card__content">
+              <h3 class="campaign-card__title">Roberto Sánchez</h3>
+              <p class="campaign-card__description">Roberto necesita una prótesis de mano con funcionalidad avanzada para poder retomar su trabajo como artesano independiente con ingresos estables.</p>
 
-                <div class="campaign-card__progress progress">
-                  <div class="progress__bar">
-                     <div class="progress__fill" style="width: 45%;"></div>
-                  </div>
-                  <div class="progress__info">
-                    <span>$22,500 recaudados</span>
-                    <span>Meta: $50,000</span>
-                  </div>
+              <div class="campaign-card__details">
+                <div class="detail-item">
+                  <span class="detail-label">Plazo de inversión:</span>
+                  <span class="detail-value">18 meses</span>
                 </div>
-
-                <div class="campaign-card__actions">
-                  <a href="campana-detalle.html?id=2" class="btn btn--primary btn--block">Donar</a>
-                  <a href="campana-detalle.html?id=2" class="btn btn--outline btn--block">Ver Más</a>
-                </div>
-
-                <div class="campaign-card__share share-buttons">
-                   <span>Compartir:</span>
-                  <a href="#" class="share-btn share-btn--facebook" aria-label="Compartir en Facebook"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="share-btn share-btn--whatsapp" aria-label="Compartir en WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                  <a href="#" class="share-btn share-btn--instagram" aria-label="Compartir en Instagram"><i class="fab fa-instagram"></i></a>
+                <div class="detail-item">
+                  <span class="detail-label">Fabricante asignado:</span>
+                  <span class="detail-value">ArtiFlex</span>
                 </div>
               </div>
-            </div>
 
-            <div class="campaign-card">
-                <img src="https://api.placeholder.com/400/320/6bb36b/ffffff?text=Imagen+Roberto" alt="Foto de campaña Roberto Sánchez" class="campaign-card__img">
-              <div class="campaign-card__content">
-                <h3 class="campaign-card__title">Roberto Sánchez</h3>
-                <p class="campaign-card__description">Roberto necesita una prótesis de mano con funcionalidad avanzada para poder retomar su trabajo como artesano.</p>
-
-                <div class="campaign-card__progress progress">
-                  <div class="progress__bar">
-                     <div class="progress__fill" style="width: 90%;"></div>
-                  </div>
-                  <div class="progress__info">
-                    <span>$45,000 recaudados</span>
-                    <span>Meta: $50,000</span>
-                  </div>
+              <div class="campaign-card__progress progress">
+                <div class="progress__bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Progreso del financiamiento: 90%">
+                    <div class="progress__fill" style="width: 90%;"></div>
                 </div>
-
-                <div class="campaign-card__actions">
-                  <a href="campana-detalle.html?id=3" class="btn btn--primary btn--block">Donar</a>
-                  <a href="campana-detalle.html?id=3" class="btn btn--outline btn--block">Ver Más</a>
-                </div>
-
-                <div class="campaign-card__share share-buttons">
-                  <span>Compartir:</span>
-                  <a href="#" class="share-btn share-btn--facebook" aria-label="Compartir en Facebook"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="share-btn share-btn--whatsapp" aria-label="Compartir en WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                  <a href="#" class="share-btn share-btn--instagram" aria-label="Compartir en Instagram"><i class="fab fa-instagram"></i></a>
+                <div class="progress__info">
+                  <span>$45,000 MXN financiados</span>
+                  <span>Meta: $50,000 MXN</span>
                 </div>
               </div>
+
+              <div class="campaign-card__actions">
+                <a href="proyecto-detalle.html?id=3" class="btn btn--secondary btn--block">Invertir en Roberto</a>
+                <a href="proyecto-detalle.html?id=3" class="btn btn--outline btn--block">Ver Análisis de Riesgo</a>
+              </div>
+
+              <div class="campaign-card__share share-buttons">
+                <span>Compartir:</span>
+                <a href="#" class="share-btn share-btn--facebook" aria-label="Compartir proyecto de Roberto Sánchez en Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" class="share-btn share-btn--whatsapp" aria-label="Compartir proyecto de Roberto Sánchez en WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="#" class="share-btn share-btn--linkedin" aria-label="Compartir proyecto de Roberto Sánchez en LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+              </div>
             </div>
-          </div> <div class="section__action text-center mt-40">
-            <a href="campanas.html" class="btn btn--outline">Ver Todas las Campañas</a>
-          </div>
-      </div> </section>
+          </article>
+        </div>
+        
+        <div class="section__action text-center mt-40">
+          <a href="proyectos.html" class="btn btn--outline">Ver Todos los Proyectos</a>
+        </div>
+      </div> 
+    </section>
 
     <section class="how-it-works section section--padding">
       <div class="container">
         <div class="section-title">
-          <h2>Cómo Funciona</h2>
+          <h2>¿Cómo Funciona PROTRED?</h2>
         </div>
 
         <div class="steps">
           <div class="step">
             <div class="step__icon">
-              <i class="fas fa-user"></i>
+              <i class="fas fa-user-plus" aria-hidden="true"></i>
             </div>
-            <h3 class="step__title">Crea Tu Perfil</h3>
-            <p class="step__text">Completa el formulario contando tu historia y necesidades específicas para una prótesis.</p>
+            <h3 class="step__title">1. Registro y Validación</h3>
+            <p class="step__text">Las personas con necesidad de prótesis crean una campaña que nuestro equipo valida y prepara para inversión.</p>
           </div>
 
           <div class="step">
             <div class="step__icon">
-              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-hand-holding-usd" aria-hidden="true"></i>
             </div>
-            <h3 class="step__title">Validación</h3>
-            <p class="step__text">Nuestro equipo verificará tu información para asegurar la transparencia de la campaña.</p>
+            <h3 class="step__title">2. Inversión Social</h3>
+            <p class="step__text">Inversionistas seleccionan proyectos y financían prótesis con expectativa de retorno económico y social.</p>
           </div>
 
           <div class="step">
             <div class="step__icon">
-              <i class="fas fa-share-alt"></i>
+              <i class="fas fa-cogs" aria-hidden="true"></i>
             </div>
-            <h3 class="step__title">Comparte</h3>
-            <p class="step__text">Tu historia será visible para donantes y profesionales que quieran ayudar.</p>
+            <h3 class="step__title">3. Fabricación y Entrega</h3>
+            <p class="step__text">Nuestros fabricantes aliados crean la prótesis adecuada y la entregan con seguimiento profesional.</p>
           </div>
 
           <div class="step">
             <div class="step__icon">
-              <i class="fas fa-heart"></i>
+              <i class="fas fa-sync" aria-hidden="true"></i>
             </div>
-            <h3 class="step__title">Recibe Ayuda</h3>
-            <p class="step__text">Recibe donaciones y ofertas de ayuda de profesionales y empresas especializadas.</p>
+            <h3 class="step__title">4. Retorno de Inversión</h3>
+            <p class="step__text">El beneficiario reintegrado devuelve la inversión según lo acordado, generando rendimientos para los inversores.</p>
           </div>
-        </div> </div> </section>
+        </div>
+      </div>
+    </section>
 
-    <section class="professionals section section--padding">
+    <section class="investors-dashboard section section--padding">
+      <div class="container">
+        <div class="dashboard-preview">
+          <div class="dashboard-content">
+            <h2>Portal del Inversionista</h2>
+            <p>Monitorea tus inversiones, consulta retornos estimados y visualiza el impacto social que estás generando en tiempo real.</p>
+            <ul class="features-list">
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Seguimiento detallado de cada proyecto</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Métricas de impacto social cuantificables</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Reportes de rendimiento financiero</li>
+              <li><i class="fas fa-check-circle" aria-hidden="true"></i> Certificados para beneficios fiscales (si aplica)</li>
+            </ul>
+            <a href="registro_Inversores.html" class="btn btn--secondary">Crear mi cuenta de inversión</a>
+          </div>
+          <div class="dashboard-image">
+            <img src="images/dashboard-preview-real.png" alt="Vista previa del panel de control del inversionista en PROTRED, mostrando gráficos y métricas de inversión.">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manufacturers section section--padding">
       <div class="container">
         <div class="section-title">
-          <h2>Para Profesionales y Empresas</h2>
+          <h2>Fabricantes y Técnicos Aliados</h2>
         </div>
 
-        <div class="professionals__content text-center">
-          <p class="mb-30">Si eres profesional de la salud o una empresa que fabrica prótesis, puedes ofrecer descuentos, consultas gratuitas o donaciones a quienes más lo necesitan.</p>
-          <a href="profesionales-registro.html" class="btn btn--primary">Unirse como Profesional</a>
+        <div class="manufacturers__content">
+          <div class="manufacturers-text">
+            <p>Únete a nuestra red de fabricantes y técnicos especializados para ofrecer soluciones de calidad a proyectos con financiación garantizada.</p>
+            <ul class="benefits-list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Acceso a proyectos pre-financiados</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Visibilidad como empresa socialmente responsable</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Flujo constante de casos</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Pagos garantizados por el modelo de inversión</li>
+            </ul>
+            <a href="aliados.html" class="btn btn--primary">Convertirme en aliado técnico</a>
+          </div>
+          <div class="manufacturers-logos">
+            <div class="logo-grid">
+              <div class="logo-item">
+                <img src="images/logo-aliado1-real.png" alt="Logo de [Nombre del Fabricante Aliado 1]">
+              </div>
+              <div class="logo-item">
+                <img src="images/logo-aliado2-real.png" alt="Logo de [Nombre del Fabricante Aliado 2]">
+              </div>
+              <div class="logo-item">
+                <img src="images/logo-aliado3-real.png" alt="Logo de [Nombre del Fabricante Aliado 3]">
+              </div>
+              <div class="logo-item">
+                <img src="images/logo-aliado4-real.png" alt="Logo de [Nombre del Fabricante Aliado 4]">
+              </div>
+            </div>
+          </div>
         </div>
-      </div> </section>
+      </div>
+    </section>
 
-    </main>
+    <section class="testimonials section section--padding">
+      <div class="container">
+        <div class="section-title">
+          <h2>Testimonios de Éxito</h2>
+        </div>
+        <div class="testimonials-slider"> 
+          <article class="testimonial">
+            <div class="testimonial__image">
+              <img src="images/carlos-m-real.jpg" alt="Fotografía de Carlos M., beneficiario de PROTRED.">
+            </div>
+            <div class="testimonial__content">
+              <blockquote>
+                <p>"Gracias a los inversionistas de PROTRED pude acceder a una prótesis de pierna de alta tecnología. Ahora he vuelto a mi trabajo y estoy cumpliendo con el plan de devolución, sabiendo que mi caso ayudará a financiar más personas."</p>
+              </blockquote>
+              <div class="testimonial__author">
+                <h4>Carlos M.</h4>
+                <span>Beneficiario de prótesis de pierna</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial">
+            <div class="testimonial__image">
+              <img src="images/ana-l-real.jpg" alt="Fotografía de Ana L., inversionista en PROTRED.">
+            </div>
+            <div class="testimonial__content">
+              <blockquote>
+                <p>"Como inversionista, PROTRED me ha permitido diversificar mi portafolio mientras ayudo a mejorar vidas. El retorno del 9% anual es competitivo y la transparencia en el seguimiento de mi inversión me da confianza total."</p>
+              </blockquote>
+              <div class="testimonial__author">
+                <h4>Ana L.</h4>
+                <span>Inversionista desde 2023</span>
+              </div>
+            </div>
+          </article>
+          </div>
+      </div>
+    </section>
+
+    <section class="impact-stats section section--padding">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nuestro Impacto en Cifras</h2>
+        </div>
+        <div class="stats-container">
+          <div class="stat-box">
+            <span class="stat-number">120+</span> <span class="stat-label">Proyectos financiados</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">$2.5M MXN</span> <span class="stat-label">Capital invertido</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">95%</span> <span class="stat-label">Tasa de éxito en proyectos</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">9.4%</span>
+            <span class="stat-label">ROI promedio anual</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section section--padding">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Comienza tu inversión con impacto</h2>
+          <p>Une rentabilidad financiera con transformación social tangible.</p>
+          <div class="cta-buttons">
+            <a href="registro_Inversores.html" class="btn btn--secondary btn--lg">Invertir ahora</a>
+            <a href="como-funciona.html" class="btn btn--outline btn--lg">Conocer más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer__content">
         <div class="footer__column">
           <h3 class="footer__title">PROTRED</h3>
-          <p>Transformando vidas a través de la solidaridad y la tecnología. Unidos podemos lograr que más personas tengan acceso a prótesis de calidad.</p>
+          <p>Plataforma de inversión social que conecta a personas con discapacidad que requieren prótesis con inversionistas solidarios y fabricantes aliados.</p>
           <div class="social-links">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Visita nuestra página de Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Síguenos en Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Síguenos en Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Conecta con nosotros en LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
           </div>
         </div>
 
@@ -226,20 +442,30 @@
           <h3 class="footer__title">Enlaces Rápidos</h3>
           <ul class="footer__list">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="campanas.html">Campañas</a></li>
+            <li><a href="proyectos.html">Proyectos de Inversión</a></li>
             <li><a href="como-funciona.html">Cómo Funciona</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="profesionales.html">Para Profesionales</a></li>
+            <li><a href="aliados.html">Fabricantes Aliados</a></li>
           </ul>
         </div>
 
         <div class="footer__column">
-          <h3 class="footer__title">Ayuda</h3>
+          <h3 class="footer__title">Para Inversionistas</h3>
           <ul class="footer__list">
-            <li><a href="faq.html">Preguntas Frecuentes</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="por-que-registro_Inversores.html">Por qué invertir</a></li>
+            <li><a href="modelo-financiero.html">Modelo financiero</a></li>
+            <li><a href="transparencia.html">Transparencia y trazabilidad</a></li>
+            <li><a href="testimonios-inversores.html">Testimonios</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__title">Documentos Legales</h3>
+          <ul class="footer__list">
+            <li><a href="terminos-inversion.html">Términos de inversión</a></li>
             <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
             <li><a href="terminos.html">Términos y Condiciones</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
           </ul>
         </div>
 
@@ -247,18 +473,18 @@
           <h3 class="footer__title">Contacto</h3>
           <address class="footer__address">
             Email: <a href="mailto:info@protred.org">info@protred.org</a><br>
-            Teléfono: <a href="tel:+5551234567">(555) 123-4567</a><br>
-            Av. Principal #123, Ciudad
-          </address>
+            Teléfono: <a href="tel:+525551234567">+52 (555) 123-4567</a> <br>
+            Av. Principal #123, Ciudad, Estado, CP. </address>
         </div>
       </div>
 
       <div class="footer__bottom">
-        <p>&copy; 2025 PROTRED. Todos los derechos reservados.</p>
+        <p>&copy; <span id="currentYear">2025</span> PROTRED. Todos los derechos reservados.</p>
+        <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
       </div>
     </div>
   </footer>
 
-  <script src="Script.js"></script>
+  <script src="Script.js" defer></script>
 </body>
 </html>

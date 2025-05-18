@@ -9,14 +9,14 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="IndexStyle.css"> <style>
-    /* Estilos específicos para la página "Cómo Funciona" */
+
     .how-works-hero {
-      background-color: #eef3f7; /* Un color suave y profesional */
+      background-color: #eef3f7; 
       padding: 60px 20px;
       text-align: center;
     }
     .how-works-hero h1 {
-      color: #004e89; /* Color principal de PROTRED */
+      color: #004e89; 
       margin-bottom: 15px;
       font-size: 2.8em;
     }
@@ -40,7 +40,7 @@
     }
     .process-section .section-title i {
       margin-right: 15px;
-      color: #ff6b35; /* Color de acento de PROTRED */
+      color: #ff6b35; 
     }
 
     .process-steps-container {
@@ -72,10 +72,10 @@
       align-items: center;
       justify-content: center;
       margin-right: 25px;
-      font-size: 1.2em; /* Tamaño para el número */
+      font-size: 1.2em; 
     }
     .process-step .step-number-icon i {
-        font-size: 1.8em; /* Tamaño para el ícono */
+        font-size: 1.8em;
         margin-bottom: 5px;
     }
     .process-step .step-content h3 {
@@ -88,13 +88,13 @@
       line-height: 1.7;
       color: #555;
     }
-    /* Alternar la posición del ícono para un look tipo timeline */
+    
     @media (min-width: 768px) {
       .process-step:nth-child(odd) .step-number-icon {
-        order: 0; /* A la izquierda por defecto */
+        order: 0; 
       }
        .process-step:nth-child(even) {
-        flex-direction: row-reverse; /* Ícono a la derecha */
+        flex-direction: row-reverse; 
       }
       .process-step:nth-child(even) .step-number-icon {
         margin-left: 25px;
@@ -137,7 +137,7 @@
     .cta-how-works {
       text-align: center;
       padding: 50px 20px;
-      background-color: #004e89; /* Color principal */
+      background-color: #004e89; 
       color: #fff;
     }
     .cta-how-works h2 {
@@ -370,10 +370,8 @@
   </footer>
 
   <script src="Script.js" defer></script> <script>
-    // Script para el año actual en el footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     
-    // Script para el menú móvil (si es el mismo de tu index.html)
     const mobileMenuButton = document.querySelector('.mobile-menu');
     const nav = document.querySelector('.nav');
 
@@ -381,7 +379,7 @@
         mobileMenuButton.addEventListener('click', () => {
             const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
             mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            nav.classList.toggle('nav--visible'); // Asumiendo que tienes una clase para mostrar/ocultar
+            nav.classList.toggle('nav--visible'); 
         });
     }
   </script>

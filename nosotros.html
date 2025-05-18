@@ -9,14 +9,14 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="IndexStyle.css"> <style>
-    /* Estilos específicos para la página "Nosotros" pueden ir aquí o en IndexStyle.css */
+    
     .about-hero {
-      background-color: #f4f7f6; /* Un color suave para el hero */
+      background-color: #f4f7f6; 
       padding: 60px 20px;
       text-align: center;
     }
     .about-hero h1 {
-      color: #004e89; /* Color principal de PROTRED */
+      color: #004e89; 
       margin-bottom: 15px;
       font-size: 2.8em;
     }
@@ -36,17 +36,17 @@
     }
 
     .section-nosotros {
-      padding: 50px 0; /* Reemplaza section--padding si es necesario */
+      padding: 50px 0; 
     }
     .section-nosotros .section-title h2 {
       display: flex;
       align-items: center;
-      justify-content: center; /* Centra el título y el icono */
+      justify-content: center; 
       font-size: 2.2em;
     }
     .section-nosotros .section-title i {
       margin-right: 15px;
-      color: #ff6b35; /* Color de acento de PROTRED */
+      color: #ff6b35; 
     }
 
     .value-proposition-grid {
@@ -60,7 +60,7 @@
       padding: 25px;
       border-radius: 8px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      border-left: 5px solid #004e89; /* Acento de color */
+      border-left: 5px solid #004e89;
     }
     .value-card-nosotros h3 {
       color: #004e89;
@@ -79,12 +79,12 @@
       line-height: 1.5;
     }
     .value-card-nosotros ul li::before {
-      content: "\f00c"; /* Icono de check de Font Awesome */
+      content: "\f00c";
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
       position: absolute;
       left: 0;
-      color: #6bb36b; /* Color verde para el check */
+      color: #6bb36b; 
     }
 
     .differentiators-list ul, .expected-impact-list ul {
@@ -99,13 +99,13 @@
       padding: 20px;
       border-radius: 6px;
       display: flex;
-      align-items: flex-start; /* Alinea ícono y texto */
+      align-items: flex-start; 
     }
     .differentiators-list li i, .expected-impact-list li i {
       font-size: 1.5em;
       color: #004e89;
       margin-right: 15px;
-      margin-top: 3px; /* Ajuste vertical */
+      margin-top: 3px;
     }
 
     .how-it-works-steps {
@@ -134,7 +134,7 @@
     .cta-nosotros {
       text-align: center;
       padding: 40px 20px;
-      background-color: #004e89; /* Color principal */
+      background-color: #004e89; 
       color: #fff;
     }
     .cta-nosotros h2 {
@@ -315,7 +315,7 @@
             <h2>Únete a la Transformación</h2>
             <p>Ya sea que necesites apoyo, desees invertir con impacto o quieras aliarte como fabricante, hay un lugar para ti en PROTRED.</p>
             <a href="registro_Inversores.html" class="btn btn--secondary btn--lg">Quiero Invertir</a>
-            <a href="solicitar-ayuda.html" class="btn btn--primary btn--lg">Necesito Financiamiento</a>
+            <a href="solicitar_Financiamiento.html" class="btn btn--primary btn--lg">Necesito Financiamiento</a>
             <a href="aliados.html" class="btn btn--outline btn--lg" style="border-color: #fff; color: #fff;">Ser Aliado Fabricante</a>
         </div>
     </section>
@@ -384,10 +384,8 @@
   </footer>
 
   <script src="Script.js" defer></script> <script>
-    // Script para el año actual en el footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     
-    // Script para el menú móvil (si es el mismo de tu index.html)
     const mobileMenuButton = document.querySelector('.mobile-menu');
     const nav = document.querySelector('.nav');
 

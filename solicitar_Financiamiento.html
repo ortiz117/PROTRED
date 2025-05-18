@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicita Financiamiento para tu Prótesis - PROTRED</title>
+  <meta name="description" content="En PROTRED te ayudamos a obtener financiamiento para la prótesis que necesitas. Conoce los beneficios, el proceso y cómo empezar tu campaña.">
+  
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="IndexStyle.css">
+  
+  <style>
+    .request-hero {
+      background: linear-gradient(rgba(0, 78, 137, 0.8), rgba(0, 78, 137, 0.8)), url('https://api.placeholder.com/1200x500/cccccc/333333?text=Esperanza+y+Movilidad') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .request-hero h1 { color: #fff; font-size: 3em; margin-bottom: 15px; }
+    .request-hero p { font-size: 1.3em; max-width: 750px; margin: 0 auto 30px auto; }
+    .request-hero .btn--primary { padding: 15px 30px; font-size: 1.2em; }
+
+    .section-solicitar { padding: 50px 0; }
+    .section-solicitar .section-title h2 { display: flex; align-items: center; justify-content: center; font-size: 2.2em; color: #004e89;}
+    .section-solicitar .section-title i { margin-right: 15px; color: #ff6b35; }
+
+    .benefits-list-solicitar ul, .requirements-list ul { list-style: none; padding-left: 0; }
+    .benefits-list-solicitar li, .requirements-list li {
+      display: flex;
+      align-items: flex-start;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .benefits-list-solicitar li i, .requirements-list li i {
+      color: #6bb36b; 
+      margin-right: 15px;
+      font-size: 1.4em;
+      margin-top: 4px;
+    }
+    
+    .process-for-you-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; }
+    .process-for-you-step { background-color: #f9f9f9; padding: 25px; border-radius: 8px; text-align: center; }
+    .process-for-you-step i { font-size: 2.5em; color: #004e89; margin-bottom: 15px; }
+    .process-for-you-step h4 { color: #ff6b35; margin-bottom: 10px; }
+
+    .testimonials-solicitar .testimonial {  display: flex; margin-bottom: 20px; background: #fff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .testimonials-solicitar .testimonial__image img { width: 100px; height: 100px; border-radius: 50%; margin-right: 20px; }
+    .testimonials-solicitar .testimonial__author h4 { margin:5px 0; color:#004e89; }
+    
+    .cta-solicitar { background-color: #f4f7f6; padding: 50px 20px; text-align: center; }
+    .cta-solicitar .btn { margin-top:10px;}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo"><h1>PROTRED</h1></div>
+      <button class="mobile-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><i class="fas fa-bars"></i></button>
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+          <li class="nav__item"><a href="campanas.html" class="nav__link">Campañas</a></li>
+          <li class="nav__item"><a href="como-funciona.html" class="nav__link">Cómo Funciona</a></li>
+          <li class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+          <li class="nav__item"><a href="aliados.html" class="nav__link">Fabricantes Aliados</a></li>
+          <li class="nav__item nav__item--mobile-auth"><a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a></li>
+          <li class="nav__item nav__item--mobile-auth"><a href="invertir.html" class="btn btn--secondary"><i class="fas fa-chart-line"></i> Invertir</a></li>
+          <li class="nav__item nav__item--mobile-auth"><a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart"></i> Solicitar Financiamiento</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
+        <a href="invertir.html" class="btn btn--secondary"><i class="fas fa-chart-line"></i> Invertir</a>
+        <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart"></i> Solicitar Financiamiento</a> </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="request-hero">
+      <div class="container">
+        <h1>Tu Prótesis es Posible con PROTRED</h1>
+        <p>Sabemos que acceder a una prótesis puede ser un desafío. En PROTRED, te conectamos con una comunidad solidaria dispuesta a invertir en tu futuro, movilidad y bienestar.</p>
+        <a href="crear-campana.html" class="btn btn--primary"><i class="fas fa-bullhorn"></i> Crea tu Campaña Ahora</a>
+      </div>
+    </section>
+
+    <section class="section-solicitar benefits-section">
+      <div class="container">
+        <div class="section-title">
+          <h2><i class="fas fa-gift"></i>¿Por Qué Solicitar Financiamiento con PROTRED?</h2>
+        </div>
+        <div class="benefits-list-solicitar">
+          <ul>
+            <li><i class="fas fa-users"></i><strong>Red de Inversión Solidaria:</strong> Accede a una comunidad de inversionistas comprometidos con el impacto social.</li>
+            <li><i class="fas fa-volume-up"></i><strong>Mayor Visibilidad:</strong> Compartimos tu historia para alcanzar a quienes pueden ayudarte. Te apoyamos en la comunicación de tu caso.</li>
+            <li><i class="fas fa-shield-alt"></i><strong>Proceso Transparente y Acompañado:</strong> Te guiamos en cada paso, desde la creación de tu campaña hasta la recepción de tu prótesis.</li>
+            <li><i class="fas fa-rocket"></i><strong>Sin Costos Iniciales:</strong> Crear tu campaña en PROTRED es gratuito.</li>
+            <li><i class="fas fa-award"></i><strong>Prótesis de Calidad:</strong> Facilitamos el acceso a soluciones protésicas funcionales y de alta calidad a través de nuestros fabricantes aliados.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-solicitar process-for-you-section" style="background-color: #eef3f7;">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-shoe-prints"></i>Nuestro Proceso para Ayudarte (Simplificado)</h2>
+            </div>
+            <div class="process-for-you-steps">
+                <div class="process-for-you-step">
+                    <i class="fas fa-file-signature"></i><h4>1. Cuéntanos tu Historia</h4>
+                    <p>Regístrate y crea tu campaña de forma sencilla, compartiendo tu necesidad y tus sueños.</p>
+                </div>
+                <div class="process-for-you-step">
+                    <i class="fas fa-user-check"></i><h4>2. Validamos tu Caso</h4>
+                    <p>Nuestro equipo revisa tu solicitud y te asesora para preparar tu campaña para el éxito.</p>
+                </div>
+                <div class="process-for-you-step">
+                    <i class="fas fa-hand-holding-heart"></i><h4>3. Conectamos con Inversores</h4>
+                    <p>Publicamos tu campaña para que nuestra red de inversionistas pueda conocerte y apoyarte.</p>
+                </div>
+                <div class="process-for-you-step">
+                    <i class="fas fa-cogs"></i><h4>4. Fabricamos tu Prótesis</h4>
+                    <p>Una vez financiada, nuestros fabricantes aliados crean la prótesis que necesitas.</p>
+                </div>
+                 <div class="process-for-you-step">
+                    <i class="fas fa-walking"></i><h4>5. Transforma tu Vida</h4>
+                    <p>Recibe tu prótesis, inicia tu rehabilitación y comparte tu progreso con la comunidad.</p>
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:20px;"><a href="como-funciona.html" class="btn btn--outline">Ver el Proceso Detallado</a></p>
+        </div>
+    </section>
+
+    <section class="section-solicitar requirements-section">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-tasks"></i>¿Qué Necesitas para Empezar tu Campaña?</h2>
+            </div>
+            <div class="requirements-list">
+                <ul>
+                    <li><i class="fas fa-notes-medical"></i>Un diagnóstico o informe médico que especifique tu necesidad de prótesis.</li>
+                    <li><i class="fas fa-user-edit"></i>Tu historia personal: cómo la prótesis cambiará tu vida.</li>
+                    <li><i class="fas fa-camera"></i>Fotografías (opcional, pero ayudan mucho a conectar con los inversionistas).</li>
+                    <li><i class="fas fa-file-invoice-dollar"></i>Una cotización de la prótesis (si ya la tienes). Si no, te podemos orientar.</li>
+                    <li><i class="fas fa-id-card"></i>Documento de identificación oficial.</li>
+                </ul>
+                <p>No te preocupes si no tienes todo listo, nuestro equipo te guiará durante el proceso.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section-solicitar testimonials-solicitar" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="section-title">
+                <h2><i class="fas fa-comments"></i>Historias de Esperanza</h2>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial__image">
+                    <img src="https://api.placeholder.com/120/120/ff6b35/ffffff?text=Marco+P." alt="Foto de Marco P.">
+                </div>
+                <div class="testimonial__content">
+                    <blockquote><p>"Gracias a PROTRED y a los inversionistas, pude obtener mi prótesis de pierna. He vuelto a trabajar y a jugar con mis hijos. ¡Mi vida cambió por completo!"</p></blockquote>
+                    <div class="testimonial__author"><h4>Marco P.</h4><span>Beneficiario de Prótesis Transtibial</span></div>
+                </div>
+            </div>
+             <div class="testimonial">
+                <div class="testimonial__image">
+                    <img src="https://api.placeholder.com/120/120/004e89/ffffff?text=Elena+G." alt="Foto de Elena G.">
+                </div>
+                <div class="testimonial__content">
+                    <blockquote><p>"El proceso fue muy humano y transparente. El equipo de PROTRED me acompañó en todo momento. Ahora tengo mi prótesis de mano y me siento más independiente que nunca."</p></blockquote>
+                    <div class="testimonial__author"><h4>Elena G.</h4><span>Beneficiaria de Prótesis de Mano</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-solicitar">
+        <div class="container">
+            <h2>¿Listo para Dar el Primer Paso?</h2>
+            <p>No dejes que las barreras económicas te detengan. Tu nueva vida está más cerca de lo que imaginas.</p>
+            <a href="crear-campana.html" class="btn btn--primary btn--lg"><i class="fas fa-rocket"></i> Iniciar mi Solicitud Ahora</a>
+            <a href="faq.html#solicitantes" class="btn btn--outline btn--lg">Preguntas Frecuentes</a>
+        </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__column footer__column--logo">
+          <h3 class="footer__title">PROTRED</h3>
+          <p>Plataforma de inversión social que conecta a personas con discapacidad que requieren prótesis con inversionistas solidarios y fabricantes aliados.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Visita nuestra página de Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Síguenos en Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Conecta con nosotros en LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Enlaces Rápidos</h3>
+          <ul class="footer__list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="campanas.html">Campañas</a></li>
+            <li><a href="como-funciona.html">Cómo Funciona</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="aliados.html">Fabricantes Aliados</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Legal</h3>
+          <ul class="footer__list">
+            <li><a href="terminos.html">Términos y Condiciones</a></li>
+            <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Contacto</h3>
+          <address class="footer__address">
+            Email: <a href="mailto:info@protred.org">info@protred.org</a><br>
+            Teléfono: <a href="tel:+525551234567">(555) 123-4567</a><br>
+            Av. Principal #123, Ciudad, México
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="currentYearSolicitar">2025</span> PROTRED. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Script.js" defer></script>
+  <script>
+    document.getElementById('currentYearSolicitar').textContent = new Date().getFullYear();
+    const mobileMenuButtonSolicitar = document.querySelector('.mobile-menu');
+    const navSolicitar = document.querySelector('.nav');
+    if (mobileMenuButtonSolicitar && navSolicitar) {
+        mobileMenuButtonSolicitar.addEventListener('click', () => {
+            const isExpanded = mobileMenuButtonSolicitar.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuButtonSolicitar.setAttribute('aria-expanded', !isExpanded);
+            navSolicitar.classList.toggle('nav--visible');
+        });
+    }
+  </script>
+</body>
+</html>

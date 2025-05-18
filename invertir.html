@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invertir con Impacto - Campañas Activas | PROTRED</title>
+  <meta name="description" content="Explora proyectos de financiamiento para prótesis en PROTRED. Invierte, obtén un retorno y transforma vidas.">
+  
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="IndexStyle.css">
+  
+  <style>
+    .invest-hero {
+      background-color: #004e89; 
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .invest-hero h1 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .invest-hero p {
+      font-size: 1.1em;
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+    }
+
+    .filters-bar {
+      background-color: #f4f7f6;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 6px;
+    }
+    .filters-bar .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+    }
+    .filters-bar select, .filters-bar input[type="search"] {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      min-width: 180px;
+    }
+    .filters-bar .btn-filter {
+        background-color: #ff6b35;
+        color: white;
+        padding: 10px 15px;
+    }
+
+    .campaign-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      padding: 20px 0;
+    }
+    .campaign-card { 
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .campaign-card__img { width: 100%; height: 200px; object-fit: cover; }
+    .campaign-card__content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+    .campaign-card__title { margin-top: 0; color: #004e89; }
+    .campaign-card__progress { margin-top: auto; } 
+    .progress { background-color: #e0e0e0; border-radius: 4px; overflow: hidden; height: 10px; margin: 10px 0; }
+    .progress__fill { background-color: #6bb36b; height: 100%; transition: width 0.5s ease; }
+    .progress__info { display: flex; justify-content: space-between; font-size: 0.9em; color: #555; }
+    .campaign-tag { position: absolute; top: 10px; right: 10px; background-color: rgba(255, 107, 53, 0.9); color: white; padding: 5px 10px; font-size: 0.9em; border-radius: 4px; }
+    .campaign-card__actions .btn { margin-top: 10px; }
+
+    .pagination { text-align: center; margin-top: 40px; }
+    .pagination a, .pagination span { margin: 0 5px; padding: 8px 12px; border: 1px solid #ddd; color: #004e89; text-decoration: none; border-radius: 4px; }
+    .pagination a:hover, .pagination span.current { background-color: #004e89; color: #fff; }
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo">
+        <h1>PROTRED</h1>
+      </div>
+      <button class="mobile-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+          <li class="nav__item"><a href="campanas.html" class="nav__link active">Campañas</a></li> <li class="nav__item"><a href="como-funciona.html" class="nav__link">Cómo Funciona</a></li>
+          <li class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+          <li class="nav__item"><a href="aliados.html" class="nav__link">Fabricantes Aliados</a></li>
+          <li class="nav__item nav__item--mobile-auth"><a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a></li>
+          <li class="nav__item nav__item--mobile-auth"><a href="invertir.html" class="btn btn--secondary"><i class="fas fa-chart-line"></i> Invertir</a></li>
+          <li class="nav__item nav__item--mobile-auth"><a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart"></i> Solicitar Financiamiento</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
+        <a href="invertir.html" class="btn btn--secondary"><i class="fas fa-chart-line"></i> Invertir</a>
+        <a href="solicitar-ayuda.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart"></i> Solicitar Financiamiento</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="invest-hero">
+      <div class="container">
+        <h1>Invierte con Impacto</h1>
+        <p>Explora las campañas activas, conoce las historias y elige dónde quieres generar un retorno financiero mientras transformas una vida. Tu inversión impulsa la movilidad y la esperanza.</p>
+      </div>
+    </section>
+
+    <div class="filters-bar">
+        <div class="container">
+            <label for="filter-roi">ROI Estimado:</label>
+            <select id="filter-roi" name="filter-roi">
+                <option value="">Todos</option>
+                <option value="8-10">8% - 10%</option>
+                <option value="10-12">10% - 12%</option>
+                <option value="12+">Más de 12%</option>
+            </select>
+            <label for="filter-protesis">Tipo de Prótesis:</label>
+            <select id="filter-protesis" name="filter-protesis">
+                <option value="">Todas</option>
+                <option value="pierna">Pierna</option>
+                <option value="brazo">Brazo</option>
+                <option value="mano">Mano</option>
+            </select>
+            <input type="search" placeholder="Buscar por nombre o palabra clave...">
+            <button class="btn btn--primary btn-filter"><i class="fas fa-filter"></i> Filtrar</button>
+        </div>
+    </div>
+
+    <section class="container">
+      <div class="section-title" style="text-align: center; margin-bottom: 30px;">
+        <h2>Proyectos Buscando Financiamiento</h2>
+      </div>
+      <div class="campaign-grid">
+        <article class="campaign-card">
+          <div class="campaign-tag">ROI Estimado: 10%</div>
+          <img src="https://api.placeholder.com/400/300/ff8c61/ffffff?text=Sofía+López" alt="Foto de Sofía López" class="campaign-card__img">
+          <div class="campaign-card__content">
+            <h3 class="campaign-card__title">Sofía López - Prótesis de Pierna</h3>
+            <p class="campaign-card__description">Sofía, una joven estudiante de arte, necesita una prótesis transtibial para continuar sus estudios y perseguir su pasión por la pintura.</p>
+            <div class="campaign-card__progress progress">
+              <div class="progress__bar">
+                <div class="progress__fill" style="width: 60%;"></div>
+              </div>
+              <div class="progress__info">
+                <span>$30,000 MXN financiados</span>
+                <span>Meta: $50,000 MXN</span>
+              </div>
+            </div>
+            <div class="campaign-card__actions">
+              <a href="proyecto-detalle.html?id=sofia-lopez" class="btn btn--secondary btn--block">Invertir en Sofía</a>
+              <a href="proyecto-detalle.html?id=sofia-lopez" class="btn btn--outline btn--block">Ver Detalles</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="campaign-card">
+          <div class="campaign-tag">ROI Estimado: 11%</div>
+          <img src="https://api.placeholder.com/400/300/61c0ff/ffffff?text=Carlos+Ramírez" alt="Foto de Carlos Ramírez" class="campaign-card__img">
+          <div class="campaign-card__content">
+            <h3 class="campaign-card__title">Carlos Ramírez - Prótesis de Mano</h3>
+            <p class="campaign-card__description">Carlos, carpintero de oficio, busca una prótesis de mano funcional para retomar su trabajo y proveer para su familia tras un accidente.</p>
+            <div class="campaign-card__progress progress">
+              <div class="progress__bar">
+                <div class="progress__fill" style="width: 85%;"></div>
+              </div>
+              <div class="progress__info">
+                <span>$68,000 MXN financiados</span>
+                <span>Meta: $80,000 MXN</span>
+              </div>
+            </div>
+            <div class="campaign-card__actions">
+              <a href="proyecto-detalle.html?id=carlos-ramirez" class="btn btn--secondary btn--block">Invertir en Carlos</a>
+              <a href="proyecto-detalle.html?id=carlos-ramirez" class="btn btn--outline btn--block">Ver Detalles</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="campaign-card">
+          <div class="campaign-tag">ROI Estimado: 9.5%</div>
+          <img src="https://api.placeholder.com/400/300/a061ff/ffffff?text=Laura+Vargas" alt="Foto de Laura Vargas" class="campaign-card__img">
+          <div class="campaign-card__content">
+            <h3 class="campaign-card__title">Laura Vargas - Prótesis de Brazo Pediátrica</h3>
+            <p class="campaign-card__description">Laura, una niña de 8 años, necesita una prótesis de brazo que se adapte a su crecimiento para jugar y desarrollarse plenamente.</p>
+            <div class="campaign-card__progress progress">
+              <div class="progress__bar">
+                <div class="progress__fill" style="width: 40%;"></div>
+              </div>
+              <div class="progress__info">
+                <span>$24,000 MXN financiados</span>
+                <span>Meta: $60,000 MXN</span>
+              </div>
+            </div>
+            <div class="campaign-card__actions">
+              <a href="proyecto-detalle.html?id=laura-vargas" class="btn btn--secondary btn--block">Invertir en Laura</a>
+              <a href="proyecto-detalle.html?id=laura-vargas" class="btn btn--outline btn--block">Ver Detalles</a>
+            </div>
+          </div>
+        </article>
+        
+        </div>
+      <div class="pagination">
+        <span class="current">1</span>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&raquo;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__column footer__column--logo">
+          <h3 class="footer__title">PROTRED</h3>
+          <p>Plataforma de inversión social que conecta a personas con discapacidad que requieren prótesis con inversionistas solidarios y fabricantes aliados.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Visita nuestra página de Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Síguenos en Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Conecta con nosotros en LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Enlaces Rápidos</h3>
+          <ul class="footer__list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="campanas.html">Campañas</a></li>
+            <li><a href="como-funciona.html">Cómo Funciona</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="aliados.html">Fabricantes Aliados</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Legal</h3>
+          <ul class="footer__list">
+            <li><a href="terminos.html">Términos y Condiciones</a></li>
+            <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__title">Contacto</h3>
+          <address class="footer__address">
+            Email: <a href="mailto:info@protred.org">info@protred.org</a><br>
+            Teléfono: <a href="tel:+525551234567">(555) 123-4567</a><br>
+            Av. Principal #123, Ciudad, México
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="currentYearInvest">2025</span> PROTRED. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="Script.js" defer></script>
+  <script>
+    document.getElementById('currentYearInvest').textContent = new Date().getFullYear();
+    const mobileMenuButtonInvest = document.querySelector('.mobile-menu');
+    const navInvest = document.querySelector('.nav');
+    if (mobileMenuButtonInvest && navInvest) {
+        mobileMenuButtonInvest.addEventListener('click', () => {
+            const isExpanded = mobileMenuButtonInvest.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuButtonInvest.setAttribute('aria-expanded', !isExpanded);
+            navInvest.classList.toggle('nav--visible');
+        });
+    }
+  </script>
+</body>
+</html>

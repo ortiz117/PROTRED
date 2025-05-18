@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes (FAQ) - PROTRED</title>
+  <meta name="description" content="Encuentra respuestas a las preguntas más comunes sobre PROTRED, inversión social, solicitud de financiamiento para prótesis y cómo unirte como fabricante.">
+  
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="IndexStyle.css">
+  
+  <style>
+    .faq-hero {
+      background-color: #f4f7f6;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .faq-hero h1 { color: #004e89; margin-bottom: 10px; font-size: 2.8em;}
+    .faq-hero p { font-size: 1.2em; color: #555; max-width: 700px; margin: 0 auto; }
+
+    .faq-content { padding: 40px 0; }
+    .faq-category { margin-bottom: 40px; }
+    .faq-category h2 {
+      color: #004e89;
+      border-bottom: 2px solid #ff6b35;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+      display: flex;
+      align-items: center;
+    }
+    .faq-category h2 i { margin-right: 12px; }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .faq-question {
+      background-color: #fff;
+      padding: 18px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #333;
+      font-size: 1.1em;
+    }
+    .faq-question:hover { background-color: #f9f9f9; }
+    .faq-question .toggle-icon {
+      transition: transform 0.3s ease;
+      font-size: 1em;
+      color: #004e89;
+    }
+    .faq-answer {
+      padding: 0px 20px; /* Se ajusta con JS */
+      background-color: #fdfdfd;
+      color: #555;
+      line-height: 1.7;
+      max-height: 0; /* Se ajusta con JS */
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    }
+    .faq-item.active .faq-answer {
+      /* max-height es manejado por JS para una transición suave */
+      padding: 18px 20px;
+    }
+    .faq-item.active .toggle-icon {
+        transform: rotate(45deg);
+    }
+    .contact-prompt {
+        text-align:center;
+        margin-top: 40px;
+        padding: 25px;
+        background-color:#eef3f7;
+        border-radius:6px;
+    }
+    .contact-prompt p { margin-bottom:15px; font-size:1.1em; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo"> <a href="index.html" style="text-decoration: none;"><h1>PROTRED</h1></a></div>
+      <button class="mobile-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><i class="fas fa-bars"></i></button>
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+          <li class="nav__item"><a href="campanas.html" class="nav__link">Campañas</a></li>
+          <li class="nav__item"><a href="como-funciona.html" class="nav__link">Cómo Funciona</a></li>
+          <li class="nav__item"><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+          <li class="nav__item"><a href="aliados.html" class="nav__link">Fabricantes Aliados</a></li>
+          <li class="nav__item"><a href="faq.html" class="nav__link active">FAQ</a></li> </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="iniciar-sesion.html" class="btn btn--outline">Iniciar Sesión</a>
+        <a href="invertir.html" class="btn btn--secondary"><i class="fas fa-chart-line"></i> Invertir</a>
+        <a href="crear-campana.html" class="btn btn--primary"><i class="fas fa-hand-holding-heart"></i> Crear Campaña</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="faq-hero">
+      <div class="container">
+        <h1>Preguntas Frecuentes</h1>
+        <p>Encuentra respuestas rápidas a tus dudas sobre PROTRED y cómo podemos trabajar juntos para transformar vidas.</p>
+      </div>
+    </section>
+
+    <section class="faq-content">
+      <div class="container">
+        
+        <div class="faq-category" id="generales">
+          <h2><i class="fas fa-info-circle"></i>Generales</h2>
+          <div class="faq-item">
+            <div class="faq-question">¿Qué es PROTRED?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>PROTRED es una plataforma web de inversión social que conecta a personas con discapacidad que requieren una prótesis, con inversionistas solidarios y fabricantes aliados. Nuestro objetivo es financiar prótesis de calidad a través de inversión con retorno, permitiendo a los inversionistas obtener beneficios financieros mientras transforman vidas.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">¿Quién puede participar en PROTRED?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>PROTRED está abierto a tres grupos principales: 1) Personas que necesitan financiamiento para una prótesis, 2) Inversionistas que buscan un retorno financiero y un impacto social, y 3) Fabricantes y técnicos de prótesis que deseen unirse a nuestra red de aliados.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-category" id="solicitantes">
+          <h2><i class="fas fa-user-injured"></i>Para Solicitantes de Financiamiento</h2>
+          <div class="faq-item">
+            <div class="faq-question">¿Cómo puedo crear una campaña para mi prótesis?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>Es muy sencillo. Primero, debes <a href="crear-campana.html">registrarte en nuestra plataforma</a> y completar el formulario de solicitud de campaña. Te pediremos información sobre ti, tu necesidad de prótesis, tu historia y el monto que necesitas. Nuestro equipo te guiará en el proceso.</p></div>
+          </div>
+           <div class="faq-item">
+            <div class="faq-question">¿Qué requisitos necesito cumplir?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>Principalmente, necesitarás un diagnóstico médico que acredite tu necesidad de prótesis, una identificación oficial y estar dispuesto a compartir tu historia. Te recomendamos tener una cotización de la prótesis, pero si no la tienes, podemos ayudarte a gestionarla. Revisa la <a href="solicitar-financiamiento.html#requisitos">sección de requisitos</a> para más detalles.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">¿Tiene algún costo crear una campaña?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>No, crear tu campaña en PROTRED es completamente gratuito. No cobramos ninguna comisión por subir tu solicitud a la plataforma.</p></div>
+          </div>
+           <div class="faq-item">
+            <div class="faq-question">¿Cómo funciona el sistema de repago de la inversión?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>El modelo de PROTRED se basa en un financiamiento solidario con retorno. Una vez que recibes tu prótesis y, idealmente, mejoras tu calidad de vida y oportunidades, se establece un plan de pagos accesible y acordado contigo para devolver el monto financiado. Este dinero, junto con un rendimiento, regresa a los inversionistas, permitiendo que el ciclo de ayuda continúe. Los términos exactos se definen en un acuerdo de financiamiento.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-category" id="inversionistas">
+          <h2><i class="fas fa-chart-line"></i>Para Inversionistas</h2>
+          <div class="faq-item">
+            <div class="faq-question">¿Cómo puedo invertir a través de PROTRED?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>Primero, debes <a href="formulario-inversionista.html">crear una cuenta de inversionista</a>. Una vez registrado y verificado, podrás explorar las <a href="campanas.html">campañas activas</a>, analizar los perfiles y seleccionar los proyectos en los que deseas invertir. La plataforma te guiará en el proceso de inversión.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">¿Cuál es la inversión mínima y el retorno esperado?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>La inversión mínima puede variar por campaña, pero buscamos que sea accesible. El retorno anual estimado para los inversionistas se sitúa entre el 8% y el 12%, dependiendo del proyecto específico y sus condiciones. Puedes ver más detalles en nuestra página de <a href="por-que-invertir.html">Por qué Invertir</a> y <a href="modelo-financiero.html">Modelo Financiero</a>.</p></div>
+          </div>
+           <div class="faq-item">
+            <div class="faq-question">¿Qué riesgos implica mi inversión?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>Como toda inversión, existen riesgos, incluyendo la posibilidad de retrasos en los pagos o, en casos excepcionales, la no recuperación total del capital. En PROTRED trabajamos para mitigar estos riesgos mediante una cuidadosa validación de campañas, el apoyo a los beneficiarios y la transparencia en el proceso. Te recomendamos diversificar tus inversiones si es posible.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">¿Cómo se asegura la transparencia de los fondos?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>La transparencia es un pilar de PROTRED. Ofrecemos reportes detallados sobre el uso de los fondos y el impacto generado por cada campaña. Podrás seguir el progreso de los proyectos en los que inviertes. Conoce más en nuestra sección de <a href="transparencia.html">Transparencia y Trazabilidad</a>.</p></div>
+          </div>
+        </div>
+        
+        <div class="faq-category" id="fabricantes">
+          <h2><i class="fas fa-cogs"></i>Para Fabricantes Aliados</h2>
+          <div class="faq-item">
+            <div class="faq-question">¿Cómo puedo unirme como fabricante aliado?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>Invitamos a fabricantes y técnicos de prótesis a <a href="formulario-fabricante.html">registrarse en nuestra plataforma</a>. Deberás completar un formulario con información sobre tu empresa, experiencia y certificaciones. Nuestro equipo evaluará tu solicitud para integrarte a nuestra red de aliados.</p></div>
+          </div>
+           <div class="faq-item">
+            <div class="faq-question">¿Qué beneficios obtengo al ser un aliado de PROTRED?<span class="toggle-icon"><i class="fas fa-plus"></i></span></div>
+            <div class="faq-answer"><p>Al unirte a PROTRED, tendrás acceso a proyectos pre-financiados, aumentarás tu visibilidad como empresa socialmente responsable, y podrás colaborar ofreciendo paquetes preferenciales. Serás parte de una red que genera un impacto real. Más información en <a href="aliados.html">Fabricantes Aliados</a>.</p></div>
+          </div>
+        </div>
+
+        <div class="contact-prompt">
+            <p>¿No encontraste la respuesta que buscabas?</p>
+            <a href="contacto.html" class="btn btn--primary">Contáctanos</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+        <p style="text-align:center;">&copy; <span id="currentYearFAQ"></span> PROTRED. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('currentYearFAQ').textContent = new Date().getFullYear();
+
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = question.querySelector('.toggle-icon i');
+
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+
+        if (isActive) {
+          item.classList.remove('active');
+          answer.style.maxHeight = null;
+          answer.style.padding = "0px 20px"; 
+          icon.classList.remove('fa-minus');
+          icon.classList.add('fa-plus');
+        } else {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          answer.style.padding = "18px 20px"; 
+          icon.classList.remove('fa-plus');
+          icon.classList.add('fa-minus');
+        }
+      });
+    });
+    const mobileMenuButtonFAQ = document.querySelector('.mobile-menu');
+    const navFAQ = document.querySelector('.nav');
+    if (mobileMenuButtonFAQ && navFAQ) {
+        mobileMenuButtonFAQ.addEventListener('click', () => {
+            const isExpanded = mobileMenuButtonFAQ.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuButtonFAQ.setAttribute('aria-expanded', !isExpanded);
+            navFAQ.classList.toggle('nav--visible');
+        });
+    }
+  </script>
+</body>
+</html>

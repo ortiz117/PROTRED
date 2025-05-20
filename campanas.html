@@ -1,6 +1,76 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="IndexStyle.css">
 <html lang="es"></html>
+<style>
+    .invest-hero {
+      background-color: #004e89; 
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .invest-hero h1 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .invest-hero p {
+      font-size: 1.1em;
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+    }
+
+    .filters-bar {
+      background-color: #f4f7f6;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 6px;
+    }
+    .filters-bar .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+    }
+    .filters-bar select, .filters-bar input[type="search"] {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      min-width: 180px;
+    }
+    .filters-bar .btn-filter {
+        background-color: #ff6b35;
+        color: white;
+        padding: 10px 15px;
+    }
+
+    .campaign-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      padding: 20px 0;
+    }
+    .campaign-card { 
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .campaign-card__img { width: 100%; height: 200px; object-fit: cover; }
+    .campaign-card__content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+    .campaign-card__title { margin-top: 0; color: #004e89; }
+    .campaign-card__progress { margin-top: auto; } 
+    .progress { background-color: #e0e0e0; border-radius: 4px; overflow: hidden; height: 10px; margin: 10px 0; }
+    .progress__fill { background-color: #6bb36b; height: 100%; transition: width 0.5s ease; }
+    .progress__info { display: flex; justify-content: space-between; font-size: 0.9em; color: #555; }
+    .campaign-tag { position: absolute; top: 10px; right: 10px; background-color: rgba(255, 107, 53, 0.9); color: white; padding: 5px 10px; font-size: 0.9em; border-radius: 4px; }
+    .campaign-card__actions .btn { margin-top: 10px; }
+
+    .pagination { text-align: center; margin-top: 40px; }
+    .pagination a, .pagination span { margin: 0 5px; padding: 8px 12px; border: 1px solid #ddd; color: #004e89; text-decoration: none; border-radius: 4px; }
+    .pagination a:hover, .pagination span.current { background-color: #004e89; color: #fff; }
+
+  </style>
 <body>
   <header class="header">
     <div class="container header__container">
